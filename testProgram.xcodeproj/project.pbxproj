@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		4D266B921B5F3A400029D2F3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D266B911B5F3A400029D2F3 /* main.cpp */; };
 		4D5A9FE91B5F3AF7001D6A91 /* Fibonacci.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D5A9FE51B5F3AF7001D6A91 /* Fibonacci.cpp */; };
-		4D7092901B6158F00002A588 /* ListNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D70928E1B6158F00002A588 /* ListNode.cpp */; };
-		4D7092931B6159370002A588 /* List.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D7092911B6159370002A588 /* List.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,9 +29,7 @@
 		4D5A9FE51B5F3AF7001D6A91 /* Fibonacci.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Fibonacci.cpp; sourceTree = "<group>"; };
 		4D5A9FE61B5F3AF7001D6A91 /* Fibonacci.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fibonacci.h; sourceTree = "<group>"; };
 		4D5A9FE81B5F3AF7001D6A91 /* MyVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyVector.h; sourceTree = "<group>"; };
-		4D70928E1B6158F00002A588 /* ListNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ListNode.cpp; sourceTree = "<group>"; };
 		4D70928F1B6158F00002A588 /* ListNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListNode.h; sourceTree = "<group>"; };
-		4D7092911B6159370002A588 /* List.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = List.cpp; sourceTree = "<group>"; };
 		4D7092921B6159370002A588 /* List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
 		4D7A266F1B670E5C002D2970 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,9 +67,7 @@
 				4D5A9FE51B5F3AF7001D6A91 /* Fibonacci.cpp */,
 				4D5A9FE61B5F3AF7001D6A91 /* Fibonacci.h */,
 				4D5A9FE81B5F3AF7001D6A91 /* MyVector.h */,
-				4D70928E1B6158F00002A588 /* ListNode.cpp */,
 				4D70928F1B6158F00002A588 /* ListNode.h */,
-				4D7092911B6159370002A588 /* List.cpp */,
 				4D7092921B6159370002A588 /* List.h */,
 				4D7A266F1B670E5C002D2970 /* Stack.h */,
 				4D266B911B5F3A400029D2F3 /* main.cpp */,
@@ -139,8 +133,6 @@
 			files = (
 				4D5A9FE91B5F3AF7001D6A91 /* Fibonacci.cpp in Sources */,
 				4D266B921B5F3A400029D2F3 /* main.cpp in Sources */,
-				4D7092901B6158F00002A588 /* ListNode.cpp in Sources */,
-				4D7092931B6159370002A588 /* List.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
