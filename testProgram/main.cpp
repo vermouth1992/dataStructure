@@ -9,11 +9,11 @@
 #include <iostream>
 #include "Fibonacci.h"
 #include "MyVector.h"
-#include "MyVector.cpp"
 #include "List.h"
 #include "List.cpp"
 #include "ListNode.h"
 #include "ListNode.cpp"
+#include "Stack.h"
 #include "math.h"
 
 using namespace std;
@@ -74,17 +74,22 @@ void testForGcd()
 
 void testForVector();
 void testForList();
-
-
+void testForStack();
 
 
 int main(int argc, const char * argv[]) {
     srand(time(NULL)); //this line should be global, but not in any function
-    testForList();
+    testForStack();
     return 0;
 }
 
-
+void testForStack()
+{
+    MyStack<int> testStack;
+    testStack.push(10);
+    testStack.push(20);
+    testStack.show();
+}
 
 
 void testForList()
@@ -128,6 +133,7 @@ void testForList()
     //test for search
     q = L4.search(9);
     cout << q->data << endl;
+    cout << L4.selectMax()->data << endl;
 }
 
 void reverse(int* A, int low, int high) //assist function
