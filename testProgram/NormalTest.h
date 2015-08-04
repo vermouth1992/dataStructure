@@ -174,5 +174,35 @@ void testForVector2()
     }
 }
 
+void testForReadFile()
+{
+    ifstream readFile;
+    readFile.open("labyrinth.txt");
+    int size = 5;
+    vec2_int laby(size, vector<int>(size));
+    if (readFile.is_open()) {
+        int i = 0;
+        int j = 0;
+        while (!readFile.eof()) {
+            readFile >> laby[i][j];
+            if (i == 4) {
+                i = 0;
+                j += 1;
+            } else {
+                i += 1;
+            }
+        }
+    } else {
+        cout << "Can't open file!" << endl;
+    }
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size; j++) {
+            cout << laby[i][j] << ' ';
+        }
+        cout << endl;
+    }
+
+}
+
 
 #endif /* defined(__testProgram__NormalTest__) */

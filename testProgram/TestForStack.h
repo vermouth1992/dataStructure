@@ -174,7 +174,7 @@ float calc(char op, float operand1, float operand2)
     float result = 1.0;
     switch (op) {
         case '+': return operand1 + operand2;
-        case '-': return operand1 - operand2;
+        case '-': return operand2 - operand1;
         case '*': return operand1 * operand2;
         case '/': return operand2 / operand1;
         case '^': {
@@ -241,7 +241,7 @@ float rpnCalculate(string rpnExpression)  //后缀表达式
     while (p != rpnExpression.end()) {
         if (*p>='0' && *p<='9') {
             readNumber(p, opnd);   //如果是数字的话，直接入栈并且接在RPN表达式之后
-            p += 1;
+            p += 1;                //跳过空格
         } else {
             char op = *p;
             if (op == '!') {
@@ -286,7 +286,7 @@ void testForStack()
     cout << calc('^', 4.5, 2.0) << endl;
     cout << calc('/', 4.0, 2.3) << endl;
     //test calculator
-    string expression = "(4+5+3.5)^2";
+    string expression = "(4+5-3.5)^2";
     string rpn;
     cout << calculate(expression, rpn) << endl;
     cout << rpn << endl;

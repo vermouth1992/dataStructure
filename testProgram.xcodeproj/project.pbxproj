@@ -24,14 +24,20 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4D25A46F1B6D2EB300F43DB5 /* NormalTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalTest.h; sourceTree = "<group>"; };
+		4D25A4721B6D2F1D00F43DB5 /* TestForVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestForVector.h; sourceTree = "<group>"; };
+		4D25A4751B6D2F7E00F43DB5 /* TestForList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestForList.h; sourceTree = "<group>"; };
+		4D25A4781B6D2FB200F43DB5 /* TestForStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestForStack.h; sourceTree = "<group>"; };
 		4D266B8E1B5F3A400029D2F3 /* testProgram */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = testProgram; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D266B911B5F3A400029D2F3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		4D5A9FE51B5F3AF7001D6A91 /* Fibonacci.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Fibonacci.cpp; sourceTree = "<group>"; };
 		4D5A9FE61B5F3AF7001D6A91 /* Fibonacci.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fibonacci.h; sourceTree = "<group>"; };
 		4D5A9FE81B5F3AF7001D6A91 /* MyVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyVector.h; sourceTree = "<group>"; };
+		4D6638231B671FA7000CBD6A /* Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
 		4D70928F1B6158F00002A588 /* ListNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListNode.h; sourceTree = "<group>"; };
 		4D7092921B6159370002A588 /* List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
 		4D7A266F1B670E5C002D2970 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		4D8C1E671B6EE1D70031A6CD /* Labyrinth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Labyrinth.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +76,13 @@
 				4D70928F1B6158F00002A588 /* ListNode.h */,
 				4D7092921B6159370002A588 /* List.h */,
 				4D7A266F1B670E5C002D2970 /* Stack.h */,
+				4D6638231B671FA7000CBD6A /* Queue.h */,
 				4D266B911B5F3A400029D2F3 /* main.cpp */,
+				4D25A46F1B6D2EB300F43DB5 /* NormalTest.h */,
+				4D25A4721B6D2F1D00F43DB5 /* TestForVector.h */,
+				4D25A4751B6D2F7E00F43DB5 /* TestForList.h */,
+				4D25A4781B6D2FB200F43DB5 /* TestForStack.h */,
+				4D8C1E671B6EE1D70031A6CD /* Labyrinth.h */,
 			);
 			path = testProgram;
 			sourceTree = "<group>";

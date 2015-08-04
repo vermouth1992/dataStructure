@@ -59,8 +59,8 @@ public:
     //
     ~MyVector(){delete[] _elem;}
     //read only
-    int size() const {cout << "Current size is " << _size << endl; return _size;}
-    int capacity() const {cout << "Current capacity is " << _capacity << endl; return _capacity;}
+    int size() const {/* cout << "Current size is " << _size << endl; */return _size;}
+    int capacity() const {/*cout << "Current capacity is " << _capacity << endl; */return _capacity;}
     bool empty() const {return _size <= 0;}
     
     int disordered() const;
