@@ -42,7 +42,8 @@ public:
     BinNode<T>* attachAsRightSubTree(BinNode<T>* x, BinTree<T>*& t); //t作为x的右子树插入
     int remove(BinNode<T>* x);  //删除以x为根的子树，返回其规模
     int removeTree();
-    void traverse_inorder(BinNode<T>* node, void (*pFunc)(T &));
+    void traverse_inorder(BinNode<T>* node, void (*pFunc)(BinNode<T>* node));
+    void showTree();
 };
 
 template <typename T>
@@ -90,6 +91,7 @@ int BinTree<T>::removeTree()
     }
 }
 
+//delete a sub-tree
 template <typename T>
 int BinTree<T>::removeAt(BinNode<T>* x)
 {
@@ -108,28 +110,36 @@ int BinTree<T>::removeAt(BinNode<T>* x)
     return n;
 }
 
+//helper function
 template <typename T>
-void showTreeNode(T &x)
+void showTreeNode(BinNode<T> *x)
 {
-    cout << x << ' ';
+    cout << x->height << ":" << x->data << "  ";
+}
+
+//helper function
+template <typename T>
+void subHeightOne(BinNode<T> *x)
+{
+    x->height -= 1;
 }
 
 template <typename T>
-void addOneTreeNode(T &x)
-{
-    x = x + 1;
-}
-
-template <typename T>
-void BinTree<T>::traverse_inorder(BinNode<T>* node, void (*pFunc)(T &))
+void BinTree<T>::traverse_inorder(BinNode<T>* node, void (*pFunc)(BinNode<T> *node))
 {
     if (node->hasLChild()) {
         traverse_inorder(node->left_child, pFunc);
     }
-    pFunc(node->data);
+    pFunc(node);
     if (node->hasRChild()) {
         traverse_inorder(node->right_child, pFunc);
     }
+}
+
+template <typename T>
+void BinTree<T>::showTree()
+{
+    traverse_inorder(root_, &showTreeNode);
 }
 
 #endif /* defined(__testProgram__BinTree__) */

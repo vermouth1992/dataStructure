@@ -34,6 +34,7 @@
 #include "Queue.h"
 #include "BinNode.h"
 #include "BinTree.h"
+#include "BinSearchTree.hpp"
 #include "Graph.h"
 #include "TestForBinTree.hpp"
 

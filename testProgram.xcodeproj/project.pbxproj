@@ -24,6 +24,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4D2581071BC1A419003A45B0 /* BinSearchTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BinSearchTree.hpp; sourceTree = "<group>"; };
 		4D25A46F1B6D2EB300F43DB5 /* NormalTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalTest.h; sourceTree = "<group>"; };
 		4D25A4721B6D2F1D00F43DB5 /* TestForVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestForVector.h; sourceTree = "<group>"; };
 		4D25A4751B6D2F7E00F43DB5 /* TestForList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestForList.h; sourceTree = "<group>"; };
@@ -88,6 +89,7 @@
 				4D8C1E671B6EE1D70031A6CD /* Labyrinth.h */,
 				4D39C4111B7143B90060C5BD /* BinNode.h */,
 				4D39C4141B7143C20060C5BD /* BinTree.h */,
+				4D2581071BC1A419003A45B0 /* BinSearchTree.hpp */,
 				4D46352C1BC0F5860066F8FF /* TestForBinTree.hpp */,
 				4DCE72F61B73E2D500AB0823 /* Graph.h */,
 				4D266B911B5F3A400029D2F3 /* main.cpp */,
