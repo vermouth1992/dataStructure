@@ -28,6 +28,7 @@ protected:
     int size_;
     BinNode<T>* root_;
     //void updateHeightAbove(BinNode<T>* x);    //更新x及其祖先高度
+    int removeAt(BinNode<T>* x);
 public:
     BinTree(): size_(0), root_(NULL) {}
     ~BinTree() { if (size_ > 0) remove(root_);}
@@ -40,7 +41,8 @@ public:
     BinNode<T>* attachAsLeftSubTree(BinNode<T>* x, BinTree<T>*& t); //t作为x的左子树插入
     BinNode<T>* attachAsRightSubTree(BinNode<T>* x, BinTree<T>*& t); //t作为x的右子树插入
     int remove(BinNode<T>* x);  //删除以x为根的子树，返回其规模
-    void show();
+    int removeTree();
+    void traverse_inorder(BinNode<T>* node, void (*pFunc)(T &));
 };
 
 template <typename T>
@@ -69,11 +71,65 @@ BinNode<T>* BinTree<T>::insertAsRightChild(BinNode<T> *x, const T &e)
     return x->right_child;
 }
 
+//return the number of nodes that has been deleted
 template <typename T>
-int BinTree<T>::remove(BinNode<T> *x)
+int BinTree<T>::remove(BinNode<T>* x)
 {
-    x->parent = NULL;
-    
+    int n = removeAt(x);
+    size_ -= n;
+    return n;
+}
+
+template <typename T>
+int BinTree<T>::removeTree()
+{
+    if (size_ > 0) {
+        return remove(root_);
+    } else {
+        return 0;
+    }
+}
+
+template <typename T>
+int BinTree<T>::removeAt(BinNode<T>* x)
+{
+    if (!x) {
+        return 0;
+    }
+    int n = 1 + removeAt(x->left_child) + removeAt(x->right_child);
+    if (x->isRoot()) {
+        root_ = NULL;
+    } else if (x->isLChild()) {
+        x->parent->left_child = NULL;
+    } else {
+        x->parent->right_child = NULL;
+    }
+    delete x;
+    return n;
+}
+
+template <typename T>
+void showTreeNode(T &x)
+{
+    cout << x << ' ';
+}
+
+template <typename T>
+void addOneTreeNode(T &x)
+{
+    x = x + 1;
+}
+
+template <typename T>
+void BinTree<T>::traverse_inorder(BinNode<T>* node, void (*pFunc)(T &))
+{
+    if (node->hasLChild()) {
+        traverse_inorder(node->left_child, pFunc);
+    }
+    pFunc(node->data);
+    if (node->hasRChild()) {
+        traverse_inorder(node->right_child, pFunc);
+    }
 }
 
 #endif /* defined(__testProgram__BinTree__) */

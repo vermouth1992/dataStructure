@@ -40,8 +40,8 @@ public:
     BinNode<T>* insertAsRightNode(T const&);
     //BinNode<T>* succ();
     bool isRoot() { return parent == NULL;}
-    bool isLChild() { return !isRoot() && (*this == parent->left_child);}
-    bool isRChild() { return !isRoot() && (*this == parent->right_child);}
+    bool isLChild() { return !isRoot() && (this == parent->left_child);}
+    bool isRChild() { return !isRoot() && (this == parent->right_child);}
     bool hasParent() { return !isRoot();}
     bool hasLChild() { return left_child != NULL;}
     bool hasRChild() { return right_child != NULL;}
