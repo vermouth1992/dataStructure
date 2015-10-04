@@ -20,5 +20,25 @@
 #define __testProgram__Queue__
 
 #include <stdio.h>
+#include "List.h"
+
+template <typename T>
+class Queue: public List<T> {
+public:
+    void enqueue(T const& e) { this->insertAsFirst(e);}
+    T dequeue() { return this->remove(this->last());}
+    T& front() { return this->last();}
+};
+
+void testForQueue() //堆栈使用vector，队列使用list的好处是方便插入和删除
+{
+    Queue<int> testQueue;
+    testQueue.enqueue(5);
+    testQueue.enqueue(10);
+    testQueue.showList();
+    testQueue.dequeue();
+    testQueue.showList();
+}
+
 
 #endif /* defined(__testProgram__Queue__) */

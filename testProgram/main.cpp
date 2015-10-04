@@ -17,6 +17,9 @@
 
 #include <iostream>
 #include <fstream>
+#include <vector>
+#include <unistd.h>
+
 #include "Fibonacci.h"
 #include "MyVector.h"
 #include "List.h"
@@ -28,8 +31,11 @@
 #include "TestForList.h"
 #include "TestForVector.h"
 #include "labyrinth.h"
-#include <vector>
-#include <unistd.h>
+#include "Queue.h"
+#include "BinNode.h"
+#include "BinTree.h"
+#include "Graph.h"
+#include "TestForBinTree.hpp"
 
 typedef vector<vector<int> > vec2_int;
 
@@ -37,7 +43,7 @@ using namespace std;
 
 int main(int argc, const char * argv[]) {
 //    srand(time(NULL)); //this line should be global, but not in any function
-    testForLabyrinth();
+    testBinNode();
     return 0;
 }
 

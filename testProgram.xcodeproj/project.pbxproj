@@ -30,6 +30,9 @@
 		4D25A4781B6D2FB200F43DB5 /* TestForStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestForStack.h; sourceTree = "<group>"; };
 		4D266B8E1B5F3A400029D2F3 /* testProgram */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = testProgram; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D266B911B5F3A400029D2F3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		4D39C4111B7143B90060C5BD /* BinNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinNode.h; sourceTree = "<group>"; };
+		4D39C4141B7143C20060C5BD /* BinTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinTree.h; sourceTree = "<group>"; };
+		4D46352C1BC0F5860066F8FF /* TestForBinTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TestForBinTree.hpp; sourceTree = "<group>"; };
 		4D5A9FE51B5F3AF7001D6A91 /* Fibonacci.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Fibonacci.cpp; sourceTree = "<group>"; };
 		4D5A9FE61B5F3AF7001D6A91 /* Fibonacci.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fibonacci.h; sourceTree = "<group>"; };
 		4D5A9FE81B5F3AF7001D6A91 /* MyVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyVector.h; sourceTree = "<group>"; };
@@ -38,6 +41,7 @@
 		4D7092921B6159370002A588 /* List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
 		4D7A266F1B670E5C002D2970 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
 		4D8C1E671B6EE1D70031A6CD /* Labyrinth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Labyrinth.h; sourceTree = "<group>"; };
+		4DCE72F61B73E2D500AB0823 /* Graph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Graph.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +81,16 @@
 				4D7092921B6159370002A588 /* List.h */,
 				4D7A266F1B670E5C002D2970 /* Stack.h */,
 				4D6638231B671FA7000CBD6A /* Queue.h */,
-				4D266B911B5F3A400029D2F3 /* main.cpp */,
 				4D25A46F1B6D2EB300F43DB5 /* NormalTest.h */,
 				4D25A4721B6D2F1D00F43DB5 /* TestForVector.h */,
 				4D25A4751B6D2F7E00F43DB5 /* TestForList.h */,
 				4D25A4781B6D2FB200F43DB5 /* TestForStack.h */,
 				4D8C1E671B6EE1D70031A6CD /* Labyrinth.h */,
+				4D39C4111B7143B90060C5BD /* BinNode.h */,
+				4D39C4141B7143C20060C5BD /* BinTree.h */,
+				4D46352C1BC0F5860066F8FF /* TestForBinTree.hpp */,
+				4DCE72F61B73E2D500AB0823 /* Graph.h */,
+				4D266B911B5F3A400029D2F3 /* main.cpp */,
 			);
 			path = testProgram;
 			sourceTree = "<group>";
@@ -113,7 +121,7 @@
 		4D266B861B5F3A400029D2F3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "University of Southern California";
 				TargetAttributes = {
 					4D266B8D1B5F3A400029D2F3 = {
@@ -171,6 +179,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
