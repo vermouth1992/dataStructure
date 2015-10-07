@@ -23,7 +23,9 @@
 #include <vector>
 #include <string>
 
-typedef vector<vector<char> > vec2_char;
+#include "Stack.h"
+
+typedef std::vector<std::vector<char> > vec2_char;
 
 //stack applications
 //the output is little-endian

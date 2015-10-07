@@ -21,7 +21,6 @@ protected:
     //find the next value in BST
     BinNode<T>* succ(BinNode<T>*);
     bool removeAt(BinNode<T>* node, BinSearchInsertDirection dir);
-    void updateHeight(BinNode<T>* curr_node);
 public:
     bool search(const T &e, BinNode<T>*& curr_node, BinSearchInsertDirection &dir);
     BinNode<T>* insert(const T &e);
@@ -85,12 +84,6 @@ BinNode<T>* BinSearchTree<T>::succ(BinNode<T> *start)
 }
 
 template <typename T>
-void BinSearchTree<T>::updateHeight(BinNode<T>* curr_node)
-{
-    this->traverse_inorder(curr_node, &subHeightOne);
-}
-
-template <typename T>
 bool BinSearchTree<T>::remove(const T &e)
 {
     BinNode<T> *curr_node = this->root_;
@@ -131,6 +124,7 @@ bool BinSearchTree<T>::removeAt(BinNode<T>* curr_node, BinSearchInsertDirection 
             } else {
                 curr_node->parent->right_child = NULL;
             }
+            this->updateHeightAbove(curr_node->parent);
             delete curr_node;
             return true;
         //has left child
@@ -142,7 +136,7 @@ bool BinSearchTree<T>::removeAt(BinNode<T>* curr_node, BinSearchInsertDirection 
                 curr_node->parent->right_child = curr_node->left_child;
             }
             //update height
-            updateHeight(curr_node->left_child);
+            this->updateHeightAbove(curr_node->parent);
             delete curr_node;
             return true;
         //has right child
@@ -154,7 +148,7 @@ bool BinSearchTree<T>::removeAt(BinNode<T>* curr_node, BinSearchInsertDirection 
                 curr_node->parent->right_child = curr_node->right_child;
             }
             //update height
-            updateHeight(curr_node->right_child);
+            this->updateHeightAbove(curr_node->parent);
             delete curr_node;
             return true;
         default:

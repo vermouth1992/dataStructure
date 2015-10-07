@@ -20,6 +20,7 @@
 #define __testProgram__TestForVector__
 
 #include <stdio.h>
+#include "MyVector.h"
 
 void addOne(int& x) {  //used for function pointer
     x += 1;

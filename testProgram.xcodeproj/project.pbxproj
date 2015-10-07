@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D1C3E161BC4BDB900B88AD7 /* AVL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C3E151BC4BDB900B88AD7 /* AVL.cpp */; settings = {ASSET_TAGS = (); }; };
 		4D266B921B5F3A400029D2F3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D266B911B5F3A400029D2F3 /* main.cpp */; };
 		4D5A9FE91B5F3AF7001D6A91 /* Fibonacci.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D5A9FE51B5F3AF7001D6A91 /* Fibonacci.cpp */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4D1C3E131BC4B8AF00B88AD7 /* AVL.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AVL.hpp; sourceTree = "<group>"; };
+		4D1C3E151BC4BDB900B88AD7 /* AVL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AVL.cpp; sourceTree = "<group>"; };
 		4D2581071BC1A419003A45B0 /* BinSearchTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BinSearchTree.hpp; sourceTree = "<group>"; };
 		4D25A46F1B6D2EB300F43DB5 /* NormalTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalTest.h; sourceTree = "<group>"; };
 		4D25A4721B6D2F1D00F43DB5 /* TestForVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestForVector.h; sourceTree = "<group>"; };
@@ -90,6 +93,8 @@
 				4D39C4111B7143B90060C5BD /* BinNode.h */,
 				4D39C4141B7143C20060C5BD /* BinTree.h */,
 				4D2581071BC1A419003A45B0 /* BinSearchTree.hpp */,
+				4D1C3E131BC4B8AF00B88AD7 /* AVL.hpp */,
+				4D1C3E151BC4BDB900B88AD7 /* AVL.cpp */,
 				4D46352C1BC0F5860066F8FF /* TestForBinTree.hpp */,
 				4DCE72F61B73E2D500AB0823 /* Graph.h */,
 				4D266B911B5F3A400029D2F3 /* main.cpp */,
@@ -153,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D1C3E161BC4BDB900B88AD7 /* AVL.cpp in Sources */,
 				4D5A9FE91B5F3AF7001D6A91 /* Fibonacci.cpp in Sources */,
 				4D266B921B5F3A400029D2F3 /* main.cpp in Sources */,
 			);

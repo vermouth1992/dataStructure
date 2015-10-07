@@ -49,26 +49,30 @@ void testBinNode()
     testTree.insertAsRightChild(testTree.root(), 20);
     
     //test has child
+    cout << "Test isChild function\n";
     cout << root->left_child->isLChild() << ' ' << root->right_child->isRChild() << endl;
     
     //test traverse
+    cout << "Test inorder traverse\n";
     testTree.traverse_inorder(root, &showTreeNode);
     cout << endl;
     
     //test remove
-    cout << testTree.remove(root) << endl;
+    cout << "Test remove a tree\n" << testTree.remove(root) << endl;
     
     //Binary Search tree
     BinSearchTree<int>* testBinSearchTree = new BinSearchTree<int>();
     generate_search_tree(testBinSearchTree);
+    cout << "Test inorder traverse show BinSearchTree\n";
     testBinSearchTree->showTree();
     cout << endl;
     
     //search
     BinNode<int>* binSearchCurrentNode = testBinSearchTree->root();
     BinSearchInsertDirection dir = NONE;
-    int searchValue = 16;
+    int searchValue = 34;
     bool result = testBinSearchTree->search(searchValue, binSearchCurrentNode, dir);
+    cout << "Test BST search\n";
     cout << binSearchCurrentNode->data << ' ' << dir << endl;
     if (result) {
         cout << binSearchCurrentNode->data << " is in the search tree." << endl;
@@ -77,13 +81,16 @@ void testBinNode()
     }
     
     //insert
+    cout << "Test BST insert\n";
     testBinSearchTree->insert(searchValue);
     testBinSearchTree->showTree();
     cout << endl;
     
     //test for remove
-    if (testBinSearchTree->remove(searchValue)) {
-        cout << searchValue << " has been removed successfully." << endl;
+    int removeValue = 13;
+    cout << "Test BST remove\n";
+    if (testBinSearchTree->remove(removeValue)) {
+        cout << removeValue << " has been removed successfully." << endl;
     }
     testBinSearchTree->showTree();
     cout << endl;

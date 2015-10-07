@@ -53,13 +53,13 @@ public:
 template <typename T>
 BinNode<T>* BinNode<T>::insertAsLeftNode(const T & e)
 {
-    return left_child = new BinNode<T>(e, this, NULL, NULL, height + 1);  //自己作为父节点并且插入左子女
+    return left_child = new BinNode<T>(e, this, NULL, NULL, 0);  //自己作为父节点并且插入左子女
 }
 
 template <typename T>
 BinNode<T>* BinNode<T>::insertAsRightNode(const T & e)
 {
-    return right_child = new BinNode<T>(e, this, NULL, NULL, height + 1);
+    return right_child = new BinNode<T>(e, this, NULL, NULL, 0);
 }
 
 #endif /* defined(__testProgram__BinNode__) */

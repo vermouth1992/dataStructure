@@ -20,25 +20,11 @@
 #include <vector>
 #include <unistd.h>
 
-#include "Fibonacci.h"
-#include "MyVector.h"
-#include "List.h"
-#include "ListNode.h"
-#include "Stack.h"
-#include "math.h"
-#include "NormalTest.h"
+#include "AVL.hpp"
 #include "TestForStack.h"
 #include "TestForList.h"
 #include "TestForVector.h"
-#include "labyrinth.h"
-#include "Queue.h"
-#include "BinNode.h"
-#include "BinTree.h"
-#include "BinSearchTree.hpp"
-#include "Graph.h"
 #include "TestForBinTree.hpp"
-
-typedef vector<vector<int> > vec2_int;
 
 using namespace std;
 
