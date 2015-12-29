@@ -21,6 +21,10 @@
 
 #include <stdio.h>
 #include <vector>
+#include <fstream>
+#include "Fibonacci.h"
+
+using namespace std;
 
 typedef vector<vector<int> > vec2_int;
 
@@ -33,6 +37,10 @@ long int powerOf2(long int);
 int gcdEuclid(int, int);
 int gcdChinese(int, int);
 
+int addition(int a, int b)
+{
+    return a + b;
+}
 
 
 void testForReverse()
@@ -52,18 +60,6 @@ void testForPowerOf2()
     //powerOf2 test
     cout << "test of powerOf2" << endl;
     cout << powerOf2(16) << endl;
-}
-
-void testForFib()
-{
-    //Fibonacci test
-    Fib myFib(55);
-    cout << "test of Fibonacci" << endl;
-    myFib.showValue();
-    myFib.prev();
-    myFib.showValue();
-    myFib.next();
-    myFib.showValue();
 }
 
 void testForGcd()

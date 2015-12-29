@@ -48,6 +48,7 @@ public:
     bool hasChild() { return hasLChild() || hasRChild();}
     bool hasBothChild() { return hasLChild() && hasRChild();}
     bool isLeaf() {return !hasChild();}
+    int getBalanceFactor() { return stature(right_child) - stature(left_child); }
 };
 
 template <typename T>

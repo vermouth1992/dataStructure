@@ -7,13 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D1C3E161BC4BDB900B88AD7 /* AVL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C3E151BC4BDB900B88AD7 /* AVL.cpp */; settings = {ASSET_TAGS = (); }; };
+		4D1C3E161BC4BDB900B88AD7 /* AVL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C3E151BC4BDB900B88AD7 /* AVL.cpp */; };
 		4D266B921B5F3A400029D2F3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D266B911B5F3A400029D2F3 /* main.cpp */; };
+		4D520B341BC6FBD200C45C63 /* BTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D520B321BC6FBD200C45C63 /* BTree.cpp */; };
 		4D5A9FE91B5F3AF7001D6A91 /* Fibonacci.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D5A9FE51B5F3AF7001D6A91 /* Fibonacci.cpp */; };
+		4DEBEFFA1C332B080044E688 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DEBEFF91C332B080044E688 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		4D266B8C1B5F3A400029D2F3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		4DEBEFF51C332B080044E688 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -37,6 +48,8 @@
 		4D39C4111B7143B90060C5BD /* BinNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinNode.h; sourceTree = "<group>"; };
 		4D39C4141B7143C20060C5BD /* BinTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinTree.h; sourceTree = "<group>"; };
 		4D46352C1BC0F5860066F8FF /* TestForBinTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TestForBinTree.hpp; sourceTree = "<group>"; };
+		4D520B321BC6FBD200C45C63 /* BTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BTree.cpp; sourceTree = "<group>"; };
+		4D520B331BC6FBD200C45C63 /* BTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BTree.hpp; sourceTree = "<group>"; };
 		4D5A9FE51B5F3AF7001D6A91 /* Fibonacci.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Fibonacci.cpp; sourceTree = "<group>"; };
 		4D5A9FE61B5F3AF7001D6A91 /* Fibonacci.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fibonacci.h; sourceTree = "<group>"; };
 		4D5A9FE81B5F3AF7001D6A91 /* MyVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyVector.h; sourceTree = "<group>"; };
@@ -46,10 +59,19 @@
 		4D7A266F1B670E5C002D2970 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
 		4D8C1E671B6EE1D70031A6CD /* Labyrinth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Labyrinth.h; sourceTree = "<group>"; };
 		4DCE72F61B73E2D500AB0823 /* Graph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Graph.h; sourceTree = "<group>"; };
+		4DEBEFF71C332B080044E688 /* Test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Test; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DEBEFF91C332B080044E688 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4D266B8B1B5F3A400029D2F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DEBEFF41C332B080044E688 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -63,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				4D266B901B5F3A400029D2F3 /* testProgram */,
+				4DEBEFF81C332B080044E688 /* Test */,
 				4D266B8F1B5F3A400029D2F3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				4D266B8E1B5F3A400029D2F3 /* testProgram */,
+				4DEBEFF71C332B080044E688 /* Test */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,28 +102,38 @@
 		4D266B901B5F3A400029D2F3 /* testProgram */ = {
 			isa = PBXGroup;
 			children = (
+				4D1C3E151BC4BDB900B88AD7 /* AVL.cpp */,
+				4D1C3E131BC4B8AF00B88AD7 /* AVL.hpp */,
+				4D39C4111B7143B90060C5BD /* BinNode.h */,
+				4D2581071BC1A419003A45B0 /* BinSearchTree.hpp */,
+				4D39C4141B7143C20060C5BD /* BinTree.h */,
+				4D520B321BC6FBD200C45C63 /* BTree.cpp */,
+				4D520B331BC6FBD200C45C63 /* BTree.hpp */,
 				4D5A9FE51B5F3AF7001D6A91 /* Fibonacci.cpp */,
 				4D5A9FE61B5F3AF7001D6A91 /* Fibonacci.h */,
-				4D5A9FE81B5F3AF7001D6A91 /* MyVector.h */,
-				4D70928F1B6158F00002A588 /* ListNode.h */,
+				4DCE72F61B73E2D500AB0823 /* Graph.h */,
+				4D8C1E671B6EE1D70031A6CD /* Labyrinth.h */,
 				4D7092921B6159370002A588 /* List.h */,
-				4D7A266F1B670E5C002D2970 /* Stack.h */,
-				4D6638231B671FA7000CBD6A /* Queue.h */,
+				4D70928F1B6158F00002A588 /* ListNode.h */,
+				4D266B911B5F3A400029D2F3 /* main.cpp */,
+				4D5A9FE81B5F3AF7001D6A91 /* MyVector.h */,
 				4D25A46F1B6D2EB300F43DB5 /* NormalTest.h */,
-				4D25A4721B6D2F1D00F43DB5 /* TestForVector.h */,
+				4D6638231B671FA7000CBD6A /* Queue.h */,
+				4D7A266F1B670E5C002D2970 /* Stack.h */,
+				4D46352C1BC0F5860066F8FF /* TestForBinTree.hpp */,
 				4D25A4751B6D2F7E00F43DB5 /* TestForList.h */,
 				4D25A4781B6D2FB200F43DB5 /* TestForStack.h */,
-				4D8C1E671B6EE1D70031A6CD /* Labyrinth.h */,
-				4D39C4111B7143B90060C5BD /* BinNode.h */,
-				4D39C4141B7143C20060C5BD /* BinTree.h */,
-				4D2581071BC1A419003A45B0 /* BinSearchTree.hpp */,
-				4D1C3E131BC4B8AF00B88AD7 /* AVL.hpp */,
-				4D1C3E151BC4BDB900B88AD7 /* AVL.cpp */,
-				4D46352C1BC0F5860066F8FF /* TestForBinTree.hpp */,
-				4DCE72F61B73E2D500AB0823 /* Graph.h */,
-				4D266B911B5F3A400029D2F3 /* main.cpp */,
+				4D25A4721B6D2F1D00F43DB5 /* TestForVector.h */,
 			);
 			path = testProgram;
+			sourceTree = "<group>";
+		};
+		4DEBEFF81C332B080044E688 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				4DEBEFF91C332B080044E688 /* main.cpp */,
+			);
+			path = Test;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,6 +156,23 @@
 			productReference = 4D266B8E1B5F3A400029D2F3 /* testProgram */;
 			productType = "com.apple.product-type.tool";
 		};
+		4DEBEFF61C332B080044E688 /* Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DEBEFFD1C332B080044E688 /* Build configuration list for PBXNativeTarget "Test" */;
+			buildPhases = (
+				4DEBEFF31C332B080044E688 /* Sources */,
+				4DEBEFF41C332B080044E688 /* Frameworks */,
+				4DEBEFF51C332B080044E688 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Test;
+			productName = Test;
+			productReference = 4DEBEFF71C332B080044E688 /* Test */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -133,6 +184,9 @@
 				TargetAttributes = {
 					4D266B8D1B5F3A400029D2F3 = {
 						CreatedOnToolsVersion = 6.4;
+					};
+					4DEBEFF61C332B080044E688 = {
+						CreatedOnToolsVersion = 7.2;
 					};
 				};
 			};
@@ -149,6 +203,7 @@
 			projectRoot = "";
 			targets = (
 				4D266B8D1B5F3A400029D2F3 /* testProgram */,
+				4DEBEFF61C332B080044E688 /* Test */,
 			);
 		};
 /* End PBXProject section */
@@ -158,9 +213,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D520B341BC6FBD200C45C63 /* BTree.cpp in Sources */,
 				4D1C3E161BC4BDB900B88AD7 /* AVL.cpp in Sources */,
 				4D5A9FE91B5F3AF7001D6A91 /* Fibonacci.cpp in Sources */,
 				4D266B921B5F3A400029D2F3 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DEBEFF31C332B080044E688 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DEBEFFA1C332B080044E688 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,8 +235,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -214,8 +278,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -259,6 +323,30 @@
 			};
 			name = Release;
 		};
+		4DEBEFFB1C332B080044E688 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				OTHER_LDFLAGS = "-lgtest";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4DEBEFFC1C332B080044E688 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				OTHER_LDFLAGS = "-lgtest";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -279,6 +367,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		4DEBEFFD1C332B080044E688 /* Build configuration list for PBXNativeTarget "Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DEBEFFB1C332B080044E688 /* Debug */,
+				4DEBEFFC1C332B080044E688 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

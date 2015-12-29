@@ -21,6 +21,7 @@
 
 #include <stdio.h>
 #include "List.h"
+#include "Queue.h"
 
 void testForList()
 {
@@ -66,5 +67,14 @@ void testForList()
     cout << L4.selectMax()->data << endl;
 }
 
+void testForQueue() //堆栈使用vector，队列使用list的好处是方便插入和删除
+{
+    Queue<int> testQueue;
+    testQueue.enqueue(5);
+    testQueue.enqueue(10);
+    testQueue.showList();
+    testQueue.dequeue();
+    testQueue.showList();
+}
 
 #endif /* defined(__testProgram__TestForList__) */

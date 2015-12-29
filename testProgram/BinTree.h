@@ -21,7 +21,10 @@
 
 #include <stdio.h>
 #include <cassert>
+#include <iomanip>
+
 #include "BinNode.h"
+#include "Queue.h"
 
 using namespace std;
 
@@ -48,7 +51,8 @@ public:
     int remove(BinNode<T>* x);  //删除以x为根的子树，返回其规模
     int removeTree();
     void traverse_inorder(BinNode<T>* node, void (*pFunc)(BinNode<T>* node));
-    void showTree();
+    void showTree_inorder();
+    void showTree_levelbylevel();
 };
 
 template <typename T>
@@ -173,7 +177,7 @@ int BinTree<T>::removeTree()
 template <typename T>
 void showTreeNode(BinNode<T> *x)
 {
-    cout << x->height << ":" << x->data << "  ";
+    cout << x->height << ":" << x->data << ":" << x->getBalanceFactor() << "  ";
 }
 
 //helper function
@@ -196,9 +200,40 @@ void BinTree<T>::traverse_inorder(BinNode<T>* node, void (*pFunc)(BinNode<T> *no
 }
 
 template <typename T>
-void BinTree<T>::showTree()
+void BinTree<T>::showTree_inorder()
 {
     traverse_inorder(root_, &showTreeNode);
+}
+
+template <typename T>
+void BinTree<T>::showTree_levelbylevel()
+{
+    Queue<BinNode<T>* > print_tree_queue;
+    //can't print an empty tree
+    if (!root_) {
+        return;
+    }
+    int num_nodes_level = 0;
+    print_tree_queue.enqueue(root_);
+    num_nodes_level = 1;
+    while (!print_tree_queue.empty()) {
+        int temp_num_nodes_level = 0;
+        for (int i = 0; i < num_nodes_level; i++) {
+            BinNode<T>* curr_node = print_tree_queue.dequeue();
+            cout << curr_node->data;
+            if (curr_node->hasLChild()) {
+                print_tree_queue.enqueue(curr_node->left_child);
+                temp_num_nodes_level += 1;
+            }
+            if (curr_node->hasRChild()) {
+                print_tree_queue.enqueue(curr_node->right_child);
+                temp_num_nodes_level += 1;
+            }
+            cout << '\t';
+        }
+        num_nodes_level = temp_num_nodes_level;
+        cout << endl;
+    }
 }
 
 #endif /* defined(__testProgram__BinTree__) */

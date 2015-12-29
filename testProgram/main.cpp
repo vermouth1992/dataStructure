@@ -19,8 +19,8 @@
 #include <fstream>
 #include <vector>
 #include <unistd.h>
+#include <ctime>
 
-#include "AVL.hpp"
 #include "TestForStack.h"
 #include "TestForList.h"
 #include "TestForVector.h"
@@ -30,7 +30,14 @@ using namespace std;
 
 int main(int argc, const char * argv[]) {
 //    srand(time(NULL)); //this line should be global, but not in any function
-    testBinNode();
+    char a[8];
+    memset(&a[0], 0xff, 1);
+    memset(&a[1], 0xee, 1);
+    memset(&a[2], 0xdd, 1);
+    memset(&a[3], 0xcc, 1);
+    int b = a[1];
+    cout << b << endl;
+    
     return 0;
 }
 

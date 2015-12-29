@@ -30,15 +30,7 @@ public:
     T& front() { return this->last();}
 };
 
-void testForQueue() //堆栈使用vector，队列使用list的好处是方便插入和删除
-{
-    Queue<int> testQueue;
-    testQueue.enqueue(5);
-    testQueue.enqueue(10);
-    testQueue.showList();
-    testQueue.dequeue();
-    testQueue.showList();
-}
+
 
 
 #endif /* defined(__testProgram__Queue__) */

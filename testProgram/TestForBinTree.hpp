@@ -64,7 +64,7 @@ void testBinNode()
     BinSearchTree<int>* testBinSearchTree = new BinSearchTree<int>();
     generate_search_tree(testBinSearchTree);
     cout << "Test inorder traverse show BinSearchTree\n";
-    testBinSearchTree->showTree();
+    testBinSearchTree->showTree_inorder();
     cout << endl;
     
     //search
@@ -83,7 +83,7 @@ void testBinNode()
     //insert
     cout << "Test BST insert\n";
     testBinSearchTree->insert(searchValue);
-    testBinSearchTree->showTree();
+    testBinSearchTree->showTree_levelbylevel();
     cout << endl;
     
     //test for remove
@@ -92,7 +92,7 @@ void testBinNode()
     if (testBinSearchTree->remove(removeValue)) {
         cout << removeValue << " has been removed successfully." << endl;
     }
-    testBinSearchTree->showTree();
+    testBinSearchTree->showTree_levelbylevel();
     cout << endl;
     cout << testBinSearchTree->removeTree() << endl;
 }

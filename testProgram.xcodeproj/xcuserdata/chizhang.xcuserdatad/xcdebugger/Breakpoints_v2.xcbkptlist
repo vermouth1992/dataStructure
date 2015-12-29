@@ -138,7 +138,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testProgram/TestForBinTree.hpp"
-            timestampString = "465890934.59846"
+            timestampString = "465939808.611008"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "98"
@@ -234,7 +234,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testProgram/TestForBinTree.hpp"
-            timestampString = "465891101.418876"
+            timestampString = "465939808.611008"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "92"
@@ -256,6 +256,22 @@
             startingLineNumber = "92"
             endingLineNumber = "92"
             landmarkName = "remove(const T &amp;e)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testProgram/TestForBinTree.hpp"
+            timestampString = "465940683.552936"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "testBinNode()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
