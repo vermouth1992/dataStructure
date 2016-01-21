@@ -21,7 +21,7 @@ int compareUnsignedInt(const void *a, const void *b) {
     }
 }
 
-TEST (DISABLED_quickSort, array)
+TEST (quickSort, array)
 {
     std::srand((uint)std::time(0));
     size_t length = 10;
@@ -34,13 +34,11 @@ TEST (DISABLED_quickSort, array)
     qsort(a, length, sizeof(uint), compareUnsignedInt);
     for (int i = 0; i < length - 1; i++) {
         EXPECT_TRUE(a[i] <= a[i+1]);
-        std::cout << a[i] << ' ';
     }
-    cout << a[length - 1] << endl;
 }
 
 
-TEST (DISABLED_quickSort, Addition)
+TEST (quickSort, Addition)
 {
     // equal to 20
     EXPECT_EQ(addition(10, 10), 20);

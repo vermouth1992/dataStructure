@@ -22,8 +22,10 @@
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
-#include "Fibonacci.h"
 #include <assert.h>
+
+#include "Fibonacci.h"
+#include "Heap.hpp"
 
 #define default_capacity 3
 
