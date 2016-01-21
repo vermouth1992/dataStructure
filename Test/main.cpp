@@ -7,19 +7,10 @@
 //
 
 #include <iostream>
-#include "NormalTest.h"
+#include <stdlib.h>
+#include <time.h>
+#include <sys/time.h>
 #include "gtest/gtest.h"
-
-TEST (testProgram, Addition)
-{
-    // equal to 20
-    EXPECT_EQ(addition(10, 10), 20);
-    
-    EXPECT_EQ(addition(20, 10), 30);
-    
-    // not equal to 20
-    EXPECT_NE(addition(10, 10), -20);
-}
 
 int main(int argc, char * argv[])
 {

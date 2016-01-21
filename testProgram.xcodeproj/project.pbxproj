@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		4D1C3E161BC4BDB900B88AD7 /* AVL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C3E151BC4BDB900B88AD7 /* AVL.cpp */; };
 		4D266B921B5F3A400029D2F3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D266B911B5F3A400029D2F3 /* main.cpp */; };
+		4D36E0871C50063B004AB91D /* PriorityQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D36E0851C50063B004AB91D /* PriorityQueue.cpp */; };
+		4D36E08A1C5006FD004AB91D /* Heap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D36E0881C5006FD004AB91D /* Heap.cpp */; };
+		4D36E08C1C5066CF004AB91D /* NormalTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D36E08B1C5066CF004AB91D /* NormalTest.cpp */; };
+		4D36E08E1C5067C1004AB91D /* HeapTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D36E08D1C5067C1004AB91D /* HeapTest.cpp */; };
 		4D520B341BC6FBD200C45C63 /* BTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D520B321BC6FBD200C45C63 /* BTree.cpp */; };
 		4D5A9FE91B5F3AF7001D6A91 /* Fibonacci.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D5A9FE51B5F3AF7001D6A91 /* Fibonacci.cpp */; };
 		4DEBEFFA1C332B080044E688 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DEBEFF91C332B080044E688 /* main.cpp */; };
@@ -45,6 +49,12 @@
 		4D25A4781B6D2FB200F43DB5 /* TestForStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestForStack.h; sourceTree = "<group>"; };
 		4D266B8E1B5F3A400029D2F3 /* testProgram */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = testProgram; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D266B911B5F3A400029D2F3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		4D36E0851C50063B004AB91D /* PriorityQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PriorityQueue.cpp; sourceTree = "<group>"; };
+		4D36E0861C50063B004AB91D /* PriorityQueue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PriorityQueue.hpp; sourceTree = "<group>"; };
+		4D36E0881C5006FD004AB91D /* Heap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Heap.cpp; sourceTree = "<group>"; };
+		4D36E0891C5006FD004AB91D /* Heap.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Heap.hpp; sourceTree = "<group>"; };
+		4D36E08B1C5066CF004AB91D /* NormalTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NormalTest.cpp; sourceTree = "<group>"; };
+		4D36E08D1C5067C1004AB91D /* HeapTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HeapTest.cpp; sourceTree = "<group>"; };
 		4D39C4111B7143B90060C5BD /* BinNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinNode.h; sourceTree = "<group>"; };
 		4D39C4141B7143C20060C5BD /* BinTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinTree.h; sourceTree = "<group>"; };
 		4D46352C1BC0F5860066F8FF /* TestForBinTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TestForBinTree.hpp; sourceTree = "<group>"; };
@@ -124,6 +134,10 @@
 				4D25A4751B6D2F7E00F43DB5 /* TestForList.h */,
 				4D25A4781B6D2FB200F43DB5 /* TestForStack.h */,
 				4D25A4721B6D2F1D00F43DB5 /* TestForVector.h */,
+				4D36E0851C50063B004AB91D /* PriorityQueue.cpp */,
+				4D36E0861C50063B004AB91D /* PriorityQueue.hpp */,
+				4D36E0881C5006FD004AB91D /* Heap.cpp */,
+				4D36E0891C5006FD004AB91D /* Heap.hpp */,
 			);
 			path = testProgram;
 			sourceTree = "<group>";
@@ -132,6 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				4DEBEFF91C332B080044E688 /* main.cpp */,
+				4D36E08B1C5066CF004AB91D /* NormalTest.cpp */,
+				4D36E08D1C5067C1004AB91D /* HeapTest.cpp */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -216,7 +232,9 @@
 				4D520B341BC6FBD200C45C63 /* BTree.cpp in Sources */,
 				4D1C3E161BC4BDB900B88AD7 /* AVL.cpp in Sources */,
 				4D5A9FE91B5F3AF7001D6A91 /* Fibonacci.cpp in Sources */,
+				4D36E08A1C5006FD004AB91D /* Heap.cpp in Sources */,
 				4D266B921B5F3A400029D2F3 /* main.cpp in Sources */,
+				4D36E0871C50063B004AB91D /* PriorityQueue.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +242,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D36E08C1C5066CF004AB91D /* NormalTest.cpp in Sources */,
+				4D36E08E1C5067C1004AB91D /* HeapTest.cpp in Sources */,
 				4DEBEFFA1C332B080044E688 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,6 +395,7 @@
 				4DEBEFFC1C332B080044E688 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
