@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4D1C3E161BC4BDB900B88AD7 /* AVL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C3E151BC4BDB900B88AD7 /* AVL.cpp */; };
 		4D266B921B5F3A400029D2F3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D266B911B5F3A400029D2F3 /* main.cpp */; };
+		4D30991D1CA0584000973AD3 /* LeetCodeTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D30991C1CA0584000973AD3 /* LeetCodeTest.cpp */; };
 		4D36E0871C50063B004AB91D /* PriorityQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D36E0851C50063B004AB91D /* PriorityQueue.cpp */; };
 		4D36E08A1C5006FD004AB91D /* Heap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D36E0881C5006FD004AB91D /* Heap.cpp */; };
 		4D36E08C1C5066CF004AB91D /* NormalTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D36E08B1C5066CF004AB91D /* NormalTest.cpp */; };
@@ -49,6 +50,8 @@
 		4D25A4781B6D2FB200F43DB5 /* TestForStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestForStack.h; sourceTree = "<group>"; };
 		4D266B8E1B5F3A400029D2F3 /* testProgram */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = testProgram; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D266B911B5F3A400029D2F3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		4D30991B1CA0579900973AD3 /* LeetCode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LeetCode.hpp; sourceTree = "<group>"; };
+		4D30991C1CA0584000973AD3 /* LeetCodeTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LeetCodeTest.cpp; sourceTree = "<group>"; };
 		4D36E0851C50063B004AB91D /* PriorityQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PriorityQueue.cpp; sourceTree = "<group>"; };
 		4D36E0861C50063B004AB91D /* PriorityQueue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PriorityQueue.hpp; sourceTree = "<group>"; };
 		4D36E0881C5006FD004AB91D /* Heap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Heap.cpp; sourceTree = "<group>"; };
@@ -138,6 +141,7 @@
 				4D36E0861C50063B004AB91D /* PriorityQueue.hpp */,
 				4D36E0881C5006FD004AB91D /* Heap.cpp */,
 				4D36E0891C5006FD004AB91D /* Heap.hpp */,
+				4D30991B1CA0579900973AD3 /* LeetCode.hpp */,
 			);
 			path = testProgram;
 			sourceTree = "<group>";
@@ -148,6 +152,7 @@
 				4DEBEFF91C332B080044E688 /* main.cpp */,
 				4D36E08B1C5066CF004AB91D /* NormalTest.cpp */,
 				4D36E08D1C5067C1004AB91D /* HeapTest.cpp */,
+				4D30991C1CA0584000973AD3 /* LeetCodeTest.cpp */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -244,6 +249,7 @@
 			files = (
 				4D36E08C1C5066CF004AB91D /* NormalTest.cpp in Sources */,
 				4D36E08E1C5067C1004AB91D /* HeapTest.cpp in Sources */,
+				4D30991D1CA0584000973AD3 /* LeetCodeTest.cpp in Sources */,
 				4DEBEFFA1C332B080044E688 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,7 +261,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -298,7 +304,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
