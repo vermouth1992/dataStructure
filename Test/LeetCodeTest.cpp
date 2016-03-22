@@ -153,6 +153,22 @@ TEST(add, addBinary)
     EXPECT_EQ(expected, actual);
 }
 
+TEST(add, plusOne)
+{
+    vector<int> test_vector = {9, 9, 9, 9};
+    vector<int> actual = plusOne(test_vector);
+    vector<int> expected = {1, 0, 0, 0, 0};
+    EXPECT_EQ(expected, actual);
+}
+
+TEST(add, multiply)
+{
+    string num1 = "321313021";
+    string num2 = "32323820";
+    string actual = multiply(num1, num2);
+    string expected = "10386064254460220";
+    EXPECT_EQ(expected, actual);
+}
 
 
 

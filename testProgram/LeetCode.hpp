@@ -218,9 +218,38 @@ vector<vector<int>> fourSum(vector<int>& nums, int target) {
     return result;
 }
 
+// 43. Multiply Strings
+//helper function
+string oneDigitMultiply(string num, char digit) {
+    // speed up for simple case
+    if (digit == '0') {
+        return "0";
+    } else if (digit == '1') {
+        return num;
+    }
+    
+    string result;
+    int overflow = 0;
+    int int_digit = digit - '0';
+    int curr_num_digit, unit;
+    for (int i = (int)num.size() - 1; i >= 0; i--) {
+        if (num[i] == '0') {
+            unit = overflow;
+            overflow = 0;
+        } else {
+            curr_num_digit = num[i] - '0';
+            unit = (curr_num_digit * int_digit + overflow) % 10;
+            overflow = (curr_num_digit * int_digit + overflow) / 10;
+        }
+        result.insert(result.begin(), unit + '0');
+    }
+    if (overflow != 0) {
+        result.insert(result.begin(), overflow + '0');
+    }
+    return result;
+}
 
-// 67. Add Binary
-string addBinary(string a, string b) {
+string add(string a, string b, int base) {
     if (a.size() == 0) {
         return b;
     } else if (b.size() == 0) {
@@ -233,8 +262,8 @@ string addBinary(string a, string b) {
     string result;
     while (ptr_a >= 0 && ptr_b >= 0) {
         unit = (a[ptr_a] - '0') + (b[ptr_b] - '0') + overflow;
-        overflow = unit / 2;
-        digit = unit % 2;
+        overflow = unit / base;
+        digit = unit % base;
         result.insert(result.begin(), digit + '0');
         ptr_a -= 1;
         ptr_b -= 1;
@@ -243,8 +272,8 @@ string addBinary(string a, string b) {
         if (ptr_b != -1) {
             while (ptr_b >= 0) {
                 unit = (b[ptr_b] - '0') + overflow;
-                overflow = unit / 2;
-                digit = unit % 2;
+                overflow = unit / base;
+                digit = unit % base;
                 result.insert(result.begin(), digit + '0');
                 ptr_b -= 1;
             }
@@ -253,8 +282,8 @@ string addBinary(string a, string b) {
         if (ptr_a != -1) {
             while (ptr_a >= 0) {
                 unit = (a[ptr_a] - '0') + overflow;
-                overflow = unit / 2;
-                digit = unit % 2;
+                overflow = unit / base;
+                digit = unit % base;
                 result.insert(result.begin(), digit + '0');
                 ptr_a -= 1;
             }
@@ -264,6 +293,54 @@ string addBinary(string a, string b) {
         result.insert(result.begin(), '1');
     }
     return result;
+}
+
+
+string multiply(string num1, string num2) {
+    // speed up for simple case
+    if (num1 == "0" || num2 == "0") {
+        return "0";
+    } else if (num1 == "1") {
+        return num2;
+    } else if (num2 == "1") {
+        return num1;
+    }
+    vector<string> temp_result;
+    string result = "0";
+    for (int i = 0; i < (int)num2.size(); i++) {
+        string oneDigitResult = oneDigitMultiply(num1, num2[i]);
+        for (int j = 1; j < (int)num2.size() - i; j++) {
+            oneDigitResult.push_back('0');
+        }
+        temp_result.push_back(oneDigitResult);
+    }
+    for (int i = 0; i < temp_result.size(); i++) {
+        result = add(result, temp_result[i], 10);
+    }
+    return result;
+}
+
+
+// 66. Plus One
+vector<int> plusOne(vector<int>& digits) {
+    int overflow = 0;
+    for (int i = (int)digits.size() - 1; i >= 0; i--) {
+        overflow = (digits[i] + 1) / 10;
+        digits[i] = (digits[i] + 1) % 10;
+        if (overflow == 0) {
+            break;
+        }
+    }
+    if (overflow == 1) {
+        digits.insert(digits.begin(), 1);
+    }
+    return digits;
+}
+
+
+// 67. Add Binary
+string addBinary(string a, string b) {
+    return add(a, b, 2);
 }
 
 
