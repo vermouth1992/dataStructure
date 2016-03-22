@@ -28,7 +28,7 @@ TEST(sum, twoSumAll)
     int myints[] = {1, 1, 1, 1};
     vector<int> test_vector (myints, myints + sizeof(myints) / sizeof(int) );
     vector<int> target_index_1;
-    target_index_1.push_back(0);
+    target_index_1.push_back(1);
     target_index_1.push_back(1);
 /*
     vector<int> target_index_2;
@@ -63,18 +63,30 @@ TEST(sum, threeSum2)
     EXPECT_EQ(expected, actual);
 }
 
-TEST(sum, fourSum)
+TEST(sum, fourSum1)
 {
     int myints[] = {1, 0, -1, 0, -2, 2};
+    vector<int> test_vector (myints, myints + sizeof(myints) / sizeof(int) );
+    vector<vector<int>> expected;
+    expected.push_back({-2, -1, 1, 2});
+    expected.push_back({-2,  0, 0, 2});
+    expected.push_back({-1,  0, 0, 1});
+    int target = 0;
+    vector<vector<int>> actual = fourSum(test_vector, target);
+    EXPECT_EQ(expected, actual);
+}
+
+TEST(sum, fourSum2)
+{
+    int myints[] = {-479,-472,-469,-461,-456,-420,-412,-403,-391,-377,-362,-361,-340,-336,-336,-323,-315,-301,-288,-272,-271,-246,-244,-227,-226,-225,-210,-194,-190,-187,-183,-176,-167,-143,-140,-123,-120,-74,-60,-40,-39,-37,-34,-33,-29,-26,-23,-18,-17,-11,-9,6,8,20,29,35,45,48,58,65,122,124,127,129,145,164,182,198,199,206,207,217,218,226,267,274,278,278,309,322,323,327,350,361,372,376,387,391,434,449,457,465,488};
     vector<int> test_vector (myints, myints + sizeof(myints) / sizeof(int) );
     vector<vector<int>> expected;
     expected.push_back({-1,  0, 0, 1});
     expected.push_back({-2, -1, 1, 2});
     expected.push_back({-2,  0, 0, 2});
-    vector<vector<int>> actual = threeSum(test_vector);
+    int target = 1979;
+    vector<vector<int>> actual = fourSum(test_vector, target);
     EXPECT_EQ(expected, actual);
 }
-
-
 
 

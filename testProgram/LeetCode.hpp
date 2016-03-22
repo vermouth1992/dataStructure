@@ -32,26 +32,29 @@ vector<int> twoSum(vector<int>& nums, int target) {
 }
 
 // #15, 3Sum
-// helper function, the output two-d vector should be a set
+/* helper function, the output two-d vector should be a set, the nums should be in sorted order
+ * We don't need to use map in this implementation
+ */
 vector<vector<int> > twoSumAll(int starting, vector<int>& nums, int target) {
-    std::map<int, int> nums_map;
     vector<vector<int> > result;
-    // O(n) to iterate
-    std::map<int, int>::iterator map_it;
-    bool sameNumAdd = false;
-    for (int i = starting; i < nums.size(); i++) {
-        if (i != starting && nums[i] == nums[i-1]) {
-            if (sameNumAdd == false && nums[i] + nums[i-1] == target) {
-                sameNumAdd = true;
+    int front_ptr = starting;
+    int back_ptr = (int)nums.size() - 1;
+    while (front_ptr < back_ptr) {
+        if (nums[front_ptr] + nums[back_ptr] == target) {
+            vector<int> oneResult = {nums[front_ptr], nums[back_ptr]};
+            if (!result.empty() && oneResult == result[result.size()-1]) {
+                front_ptr += 1;
+                back_ptr -= 1;
             } else {
-                continue;
+                result.push_back(oneResult);
+                front_ptr += 1;
+                back_ptr -= 1;
             }
+        } else if (nums[front_ptr] + nums[back_ptr] < target) {
+            front_ptr += 1;
+        } else {
+            back_ptr -= 1;
         }
-        map_it = nums_map.find(target - nums[i]);
-        if (map_it != nums_map.end()) {
-            result.push_back({map_it->second, i});
-        }
-        nums_map[nums[i]] = i;
     }
     return result;
 }
@@ -70,7 +73,8 @@ vector<vector<int>> threeSum(vector<int>& nums) {
         twoSumResult = twoSumAll(i + 1, nums, -nums[i]);
         for (int j = 0; j < twoSumResult.size(); j++) {
             vector<int> singleTwoResult = twoSumResult[j];
-            result.push_back({nums[i], nums[singleTwoResult[0]], nums[singleTwoResult[1]]});
+            singleTwoResult.insert(singleTwoResult.begin(), nums[i]);
+            result.push_back(singleTwoResult);
         }
     }
     return result;
@@ -88,7 +92,8 @@ vector<vector<int>> threeSumAll(int starting, vector<int>& nums, int target) {
         twoSumResult = twoSumAll(i + 1, nums, target - nums[i]);
         for (int j = 0; j < twoSumResult.size(); j++) {
             vector<int> singleTwoResult = twoSumResult[j];
-            result.push_back({nums[i], nums[singleTwoResult[0]], nums[singleTwoResult[1]]});
+            singleTwoResult.insert(singleTwoResult.begin(), nums[i]);
+            result.push_back(singleTwoResult);
         }
     }
     return result;
