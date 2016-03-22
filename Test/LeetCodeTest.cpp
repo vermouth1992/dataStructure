@@ -89,7 +89,7 @@ TEST(sum, DISABLED_fourSum2)
     EXPECT_EQ(expected, actual);
 }
 
-TEST(sum, threeSumClosest)
+TEST(sum, DISABLED_threeSumClosest)
 {
     int myints[] = {13,2,0,-14,-20,19,8,-5,-13,-3,20,15,20,5,13,14,-17,-7,12,-6,0,20,-19,-1,-15,-2,8,-2,-9,13,0,-3,-18,-9,-9,-19,17,-14,-19,-4,-16,2,0,9,5,-7,-4,20,18,9,0,12,-1,10,-17,-11,16,-13,-14,-3,0,2,-18,2,8,20,-15,3,-13,-12,-2,-19,11,11,-10,1,1,-10,-2,12,0,17,-19,-7,8,-19,-17,5,-5,-10,8,0,-12,4,19,2,0,12,14,-9,15,7,0,-16,-5,16,-12,0,2,-16,14,18,12,13,5,0,5,6};
     int target = -59;
@@ -110,6 +110,55 @@ TEST(sum, threeSumClosest)
     actual = threeSumClosest(test_vector, target);
     EXPECT_EQ(expected, actual);
 }
+
+//helper function
+int toInt(ListNode* l)
+{
+    int unit = 1;
+    int result = 0;
+    while (l != NULL) {
+        result = result + unit * l->val;
+        unit *= 10;
+        l = l->next;
+    }
+    return result;
+}
+
+TEST(add, addTwoNum)
+{
+    ListNode* l1 = new ListNode(9);
+    l1->next = new ListNode(9);
+    l1->next->next = new ListNode(9);
+    
+    ListNode* l2 = new ListNode(1);
+    l2->next = new ListNode(0);
+    l2->next->next = new ListNode(0);
+    
+    ListNode* expected = new ListNode(0);
+    expected->next = new ListNode(0);
+    expected->next->next = new ListNode(0);
+    expected->next->next->next = new ListNode(1);
+    
+    ListNode* actual = addTwoNumbers(l1, l2);
+    EXPECT_EQ(toInt(expected), toInt(actual));
+}
+
+
+TEST(add, addBinary)
+{
+    string a = "111";
+    string b = "1";
+    string expected = "1000";
+    string actual = addBinary(a, b);
+    EXPECT_EQ(expected, actual);
+}
+
+
+
+
+
+
+
 
 
 

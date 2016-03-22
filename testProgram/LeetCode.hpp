@@ -9,11 +9,23 @@
 #ifndef LeetCode_h
 #define LeetCode_h
 
+#include <iostream>
 #include <vector>
 #include <map>
+#include <stdio.h>
 #include <stdlib.h>
 
 using namespace std;
+
+// common interfaces
+// singly-linked list
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode(int x) : val(x), next(NULL) {}
+};
+
+
 
 // #1, two sum
 /* using map, total time complexity is O(n) + O(n) = O(n) */
@@ -31,6 +43,64 @@ vector<int> twoSum(vector<int>& nums, int target) {
     }
     return result;
 }
+
+// 2. Add Two Numbers
+ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+    if (l1 == NULL) {
+        return l2;
+    } else if (l2 == NULL) {
+        return l1;
+    }
+    ListNode* ptr1 = l1;
+    ListNode* ptr2 = l2;
+    int unit = (ptr1->val + ptr2->val) % 10;
+    int overflow = (ptr1->val + ptr2->val) / 10;
+    ptr1 = ptr1->next;
+    ptr2 = ptr2->next;
+    ListNode* result = new ListNode(unit);
+    ListNode* result_ptr = result;
+    int digit;
+    // common part
+    while (ptr1 != NULL && ptr2 != NULL) {
+        digit = ptr1->val + ptr2->val + overflow;
+        unit = digit % 10;
+        overflow = digit / 10;
+        result_ptr->next = new ListNode(unit);
+        
+        result_ptr = result_ptr->next;
+        ptr1 = ptr1->next;
+        ptr2 = ptr2->next;
+    }
+    // ptr1 is NULL
+    if (ptr1 == NULL) {
+        if (ptr2 != NULL) {
+            while (ptr2 != NULL) {
+                digit = ptr2->val + overflow;
+                unit = digit % 10;
+                overflow = digit / 10;
+                result_ptr->next = new ListNode(unit);
+                result_ptr = result_ptr->next;
+                ptr2 = ptr2->next;
+            }
+        }
+    } else {  //ptr2 is NULL
+        if (ptr1 != NULL) {
+            while (ptr1 != NULL) {
+                digit = ptr1->val + overflow;
+                unit = digit % 10;
+                overflow = digit / 10;
+                result_ptr->next = new ListNode(unit);
+                result_ptr = result_ptr->next;
+                ptr1 = ptr1->next;
+            }
+        }
+    }
+    if (overflow == 1) {
+        result_ptr->next = new ListNode(1);
+    }
+    return result;
+}
+
 
 // #15, 3Sum
 /* helper function, the output two-d vector should be a set, the nums should be in sorted order
@@ -88,7 +158,6 @@ int twoSumClosest(int starting, vector<int>& nums, int target) {
     int closestNum = nums[front_ptr] + nums[back_ptr];
     while (front_ptr < back_ptr - 1) {
         
-    
     }
     return closestNum;
 }
@@ -148,5 +217,55 @@ vector<vector<int>> fourSum(vector<int>& nums, int target) {
     }
     return result;
 }
+
+
+// 67. Add Binary
+string addBinary(string a, string b) {
+    if (a.size() == 0) {
+        return b;
+    } else if (b.size() == 0) {
+        return a;
+    }
+    int ptr_a = (int)a.size() - 1;
+    int ptr_b = (int)b.size() - 1;
+    int overflow = 0;
+    int unit, digit;
+    string result;
+    while (ptr_a >= 0 && ptr_b >= 0) {
+        unit = (a[ptr_a] - '0') + (b[ptr_b] - '0') + overflow;
+        overflow = unit / 2;
+        digit = unit % 2;
+        result.insert(result.begin(), digit + '0');
+        ptr_a -= 1;
+        ptr_b -= 1;
+    }
+    if (ptr_a == -1) {
+        if (ptr_b != -1) {
+            while (ptr_b >= 0) {
+                unit = (b[ptr_b] - '0') + overflow;
+                overflow = unit / 2;
+                digit = unit % 2;
+                result.insert(result.begin(), digit + '0');
+                ptr_b -= 1;
+            }
+        }
+    } else {
+        if (ptr_a != -1) {
+            while (ptr_a >= 0) {
+                unit = (a[ptr_a] - '0') + overflow;
+                overflow = unit / 2;
+                digit = unit % 2;
+                result.insert(result.begin(), digit + '0');
+                ptr_a -= 1;
+            }
+        }
+    }
+    if (overflow == 1) {
+        result.insert(result.begin(), '1');
+    }
+    return result;
+}
+
+
 
 #endif /* LeetCode_h */

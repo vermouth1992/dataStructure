@@ -31,7 +31,8 @@ using namespace std;
 
 int main(int argc, const char * argv[]) {
 //    srand(time(NULL)); //this line should be global, but not in any function
-    
+    string a = "sadasd";
+    cout << a[0];
     return 0;
 }
 
