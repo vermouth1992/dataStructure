@@ -11,6 +11,7 @@
 
 #include <vector>
 #include <map>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -80,6 +81,35 @@ vector<vector<int>> threeSum(vector<int>& nums) {
     return result;
 }
 
+// 16. 3Sum Closest
+int twoSumClosest(int starting, vector<int>& nums, int target) {
+    int front_ptr = starting;
+    int back_ptr = (int)nums.size() - 1;
+    int closestNum = nums[front_ptr] + nums[back_ptr];
+    while (front_ptr < back_ptr - 1) {
+        
+    
+    }
+    return closestNum;
+}
+
+
+int threeSumClosest(vector<int>& nums, int target) {
+    std::sort(nums.begin(), nums.end());
+    int closestNum = nums[0] + nums[1] + nums[nums.size() - 1];
+    for (int i = 0; i < nums.size() - 2; i++) {
+        if (i != 0 && nums[i] == nums[i-1]) {
+            continue;
+        }
+        int closestNumCandidate = twoSumClosest(i + 1, nums, target - nums[i]) + nums[i];
+        if (abs(closestNumCandidate - target) <= abs(closestNum - target)) {
+            closestNum = closestNumCandidate;
+        }
+    }
+    return closestNum;
+}
+
+
 // #18, fourSum
 vector<vector<int>> threeSumAll(int starting, vector<int>& nums, int target) {
     vector<vector<int> > result;
@@ -104,7 +134,7 @@ vector<vector<int>> fourSum(vector<int>& nums, int target) {
     std::sort(nums.begin(), nums.end());
     vector<vector<int> > result;
     vector<vector<int> > threeSumResult;
-    for (int i = 0; i < nums.size(); i++) {
+    for (int i = 0; i < nums.size() - 2; i++) {
         // step over duplicate elements
         if (i != 0 && nums[i] == nums[i-1]) {
             continue;
