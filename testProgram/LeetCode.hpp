@@ -22,17 +22,32 @@ using namespace std;
 // singly-linked list
 class ListNode {
 public:
+    struct LessThanByValue {
+        // why can't we pass by reference here
+        bool operator () (const ListNode* lhs, const ListNode* rhs) const {
+            return (lhs->val > rhs->val);
+        }
+    };
     int val;
     ListNode *next;
     ListNode(int x) : val(x), next(NULL) {}
 };
 
-struct LessThanByValue {
-    // why can't we pass by reference here
-    bool operator () (const ListNode* lhs, const ListNode* rhs) const {
-        return (lhs->val > rhs->val);
+
+
+template <typename T>
+ListNode* listVector(vector<T>& v) {
+    if (v.empty()) {
+        return NULL;
     }
-};
+    ListNode* result = new ListNode(v[0]);
+    ListNode* working_ptr = result;
+    for (int i = 1; i < v.size(); i++) {
+        working_ptr->next = new ListNode(v[i]);
+        working_ptr = working_ptr->next;
+    }
+    return result;
+}
 
 // #1, two sum
 /* using map, total time complexity is O(n) + O(n) = O(n) */
@@ -266,8 +281,36 @@ ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
 // 23. Merge k Sorted Lists
 // minHeap comparator class
 ListNode* mergeKLists(vector<ListNode*>& lists) {
+    // construction a PQ
+    std::priority_queue<ListNode*, std::vector<ListNode*>, ListNode::LessThanByValue> helper_PQ;
+    for (int i = 0; i < lists.size(); i++) {
+        if (lists[i] != NULL) {
+            helper_PQ.push(lists[i]);
+        }
+    }
+    // if all the ListNode are NULL
+    if (helper_PQ.empty()) {
+        return NULL;
+    }
+    ListNode* result = helper_PQ.top();
+    ListNode* working_ptr = result;
+    helper_PQ.pop();
+    if (working_ptr->next != NULL) {
+        helper_PQ.push(working_ptr->next);
+    }
     
-    return NULL;
+    while (!helper_PQ.empty()) {
+        // repoint the current next
+        working_ptr->next = helper_PQ.top();
+        // move working pointer
+        working_ptr = working_ptr->next;
+        helper_PQ.pop();
+        if (working_ptr->next != NULL) {
+            helper_PQ.push(working_ptr->next);
+        }
+    }
+    
+    return result;
 }
 
 
