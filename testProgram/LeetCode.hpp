@@ -33,10 +33,8 @@ public:
     ListNode(int x) : val(x), next(NULL) {}
 };
 
-
-
 template <typename T>
-ListNode* listVector(vector<T>& v) {
+ListNode* vectorToList(vector<T>& v) {
     if (v.empty()) {
         return NULL;
     }
@@ -48,6 +46,7 @@ ListNode* listVector(vector<T>& v) {
     }
     return result;
 }
+
 
 // #1, two sum
 /* using map, total time complexity is O(n) + O(n) = O(n) */
@@ -438,6 +437,38 @@ vector<int> plusOne(vector<int>& digits) {
 string addBinary(string a, string b) {
     return add(a, b, 2);
 }
+
+// 88. Merge Sorted Array
+void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
+    // resize nums1 if the space is not enough
+    if (nums1.size() < m + n) {
+        nums1.resize(m + n);
+    }
+    int nums1_ptr = m - 1;
+    int nums2_ptr = n - 1;
+    int result_ptr = m + n - 1;
+    while (nums1_ptr >= 0 && nums2_ptr >= 0) {
+        if (nums1[nums1_ptr] < nums2[nums2_ptr]) {
+            nums1[result_ptr] = nums2[nums2_ptr];
+            nums2_ptr -= 1;
+        } else {
+            nums1[result_ptr] = nums1[nums1_ptr];
+            nums1_ptr -= 1;
+        }
+        result_ptr -= 1;
+    }
+    while (nums2_ptr >= 0) {
+        nums1[result_ptr] = nums2[nums2_ptr];
+        result_ptr -= 1;
+        nums2_ptr -= 1;
+    }
+}
+
+// 148. Sort List
+ListNode* sortList(ListNode* head) {
+    
+}
+
 
 
 

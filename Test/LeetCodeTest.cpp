@@ -174,7 +174,7 @@ TEST(add, multiply)
 }
 
 
-TEST(linkedList, mergeTwoSortedList)
+TEST(merge, mergeTwoSortedList)
 {
     ListNode* l1 = new ListNode(1);
     l1->next = new ListNode(9);
@@ -202,11 +202,11 @@ TEST(linkedList, mergeTwoSortedList)
 }
 
 
-TEST(linkedList, PQ)
+TEST(merge, PQ)
 {
     std::priority_queue<ListNode*, std::vector<ListNode*>, ListNode::LessThanByValue> tester;
     vector<int> a = {1, 10, 9, 5};
-    ListNode* temp = listVector<int>(a);
+    ListNode* temp = vectorToList<int>(a);
     while (temp != NULL) {
         tester.push(temp);
         temp = temp->next;
@@ -221,28 +221,36 @@ TEST(linkedList, PQ)
     tester.pop();
 }
 
-TEST(linkedList, mergeKSortedList)
+TEST(merge, mergeKSortedList)
 {
     vector<ListNode*> tester;
     
     vector<int> a = {1, 5, 9, 10};
-    ListNode* temp_a = listVector<int>(a);
+    ListNode* temp_a = vectorToList<int>(a);
     tester.push_back(temp_a);
     
     vector<int> b = {2};
-    ListNode* temp_b = listVector<int>(b);
+    ListNode* temp_b = vectorToList<int>(b);
     tester.push_back(temp_b);
     
     vector<int> c = {0, 3, 4, 9, 20};
-    ListNode* temp_c = listVector<int>(c);
+    ListNode* temp_c = vectorToList<int>(c);
     tester.push_back(temp_c);
     
     ListNode* actual = mergeKLists(tester);
     
     vector<int> expected_vector = {0, 1, 2, 3, 4, 5, 9, 9, 10, 20};
-    ListNode* expected = listVector<int>(expected_vector);
+    ListNode* expected = vectorToList<int>(expected_vector);
     
     EXPECT_EQ(toInt(actual), toInt(expected));
 }
 
+TEST(merge, mergeSortedArray)
+{
+    vector<int> a = {0, 3, 4, 5, 7};
+    vector<int> b = {2, 6, 8, 10};
+    merge(a, (int)a.size(), b, (int)b.size());
+    vector<int> expected = {0, 2, 3, 4, 5, 6, 7, 8, 10};
+    EXPECT_EQ(expected, a);
+}
 
