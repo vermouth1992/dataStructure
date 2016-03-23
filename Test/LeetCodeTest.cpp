@@ -8,6 +8,7 @@
 
 #include <stdio.h>
 #include <queue>          // std::priority_queue
+#include <math.h>
 
 #include "LeetCode.hpp"
 #include "gtest/gtest.h"
@@ -252,5 +253,36 @@ TEST(merge, mergeSortedArray)
     merge(a, (int)a.size(), b, (int)b.size());
     vector<int> expected = {0, 2, 3, 4, 5, 6, 7, 8, 10};
     EXPECT_EQ(expected, a);
+}
+
+TEST(math, myAtoi)
+{
+    int actual, expected;
+    string tester;
+    tester = "-1";
+    actual = myAtoi(tester);
+    expected = -1;
+    EXPECT_EQ(expected, actual);
+    
+    tester = "2147483648";
+    actual = myAtoi(tester);
+    expected = 2147483647;
+    EXPECT_EQ(expected, actual);
+    
+    tester = "    10522545459";
+    actual = myAtoi(tester);
+    expected = 2147483647;
+    EXPECT_EQ(expected, actual);
+}
+
+TEST(math, mySqrt)
+{
+    EXPECT_EQ(0, mySqrt(0));
+    EXPECT_EQ(1, mySqrt(1));
+    EXPECT_EQ(1, mySqrt(3));
+    EXPECT_EQ(2, mySqrt(4));
+    EXPECT_EQ(2, mySqrt(5));
+    EXPECT_EQ((int)sqrt(2147395599), mySqrt(2147395599));
+    EXPECT_EQ((int)sqrt(2147483647), mySqrt(2147483647));
 }
 

@@ -122,6 +122,61 @@ ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
     return result;
 }
 
+// 8. String to Integer (atoi)
+enum atoiState {IDLE, NEGATIVE, POSITIVE};
+
+int myAtoi(string str) {
+    atoiState curr_state = IDLE;
+    int result = 0;
+    int num_digits = 0;
+    for (int i = 0; i < str.size(); i++) {
+        switch (curr_state) {
+            case IDLE:
+                if (str[i] != ' ' && str[i] != '-' && str[i] != '+' && (str[i] < '0' || str[i] > '9')) {
+                    return result;
+                } else if (str[i] == '+') {
+                    curr_state = POSITIVE;
+                } else if (str[i] == '-') {
+                    curr_state = NEGATIVE;
+                } else if (str[i] >= '0' && str[i] <= '9') {
+                    curr_state = POSITIVE;
+                    result = str[i] - '0';
+                    num_digits += 1;
+                }
+                break;
+            case NEGATIVE:
+                if (str[i] >= '0' && str[i] <= '9') {
+                    result = result * 10 + str[i] - '0';
+                    if (num_digits == 10 || result < 0) {
+                        return INT_MIN;
+                    }
+                    num_digits += 1;
+                } else {
+                    return -result;
+                }
+                break;
+            case POSITIVE:
+                if (str[i] >= '0' && str[i] <= '9') {
+                    result = result * 10 + str[i] - '0';
+                    if (num_digits == 10 || result < 0) {
+                        return INT_MAX;
+                    }
+                    num_digits += 1;
+                } else {
+                    return result;
+                }
+                break;
+            default:
+                break;
+        }
+    }
+    if (curr_state == POSITIVE) {
+        return result;
+    } else {
+        return -result;
+    }
+    
+}
 
 // #15, 3Sum
 /* helper function, the output two-d vector should be a set, the nums should be in sorted order
@@ -438,6 +493,39 @@ string addBinary(string a, string b) {
     return add(a, b, 2);
 }
 
+// 69. Sqrt(x)
+int mySqrt(int x) {
+    if (x < 0) {
+        return INT_MIN;
+    } else if (x == 0) {
+        return 0;
+    } else if (x == 2147483647) {
+        return 46340;
+    }
+    // include low, but exclude high
+    int low = 1;
+    int high = x + 1;
+    // solve overflow issue
+    if (high > 46341) {
+        high = 46341;
+    }
+    int mid = (low + high) / 2;
+    
+    while (low < high - 1) {
+        int mid_square = mid * mid;
+        if (mid_square == x) {
+            return mid;
+        } else if (mid_square > x) {
+            high = mid;
+        } else {
+            low = mid;
+        }
+        mid = (low + high) / 2;
+    }
+    return low;
+}
+
+
 // 88. Merge Sorted Array
 void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
     // resize nums1 if the space is not enough
@@ -466,7 +554,7 @@ void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
 
 // 148. Sort List
 ListNode* sortList(ListNode* head) {
-    
+    return NULL;
 }
 
 

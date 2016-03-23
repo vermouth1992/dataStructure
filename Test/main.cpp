@@ -17,6 +17,6 @@ using namespace std;
 int main(int argc, char * argv[])
 {
     ::testing::InitGoogleTest(&argc, argv);
-    ::testing::GTEST_FLAG(filter) = "merge*";   //google test filter
+    ::testing::GTEST_FLAG(filter) = "math*";   //google test filter
     return RUN_ALL_TESTS();
 }
