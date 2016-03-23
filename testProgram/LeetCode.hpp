@@ -12,6 +12,7 @@
 #include <iostream>
 #include <vector>
 #include <map>
+#include <queue>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -217,6 +218,54 @@ vector<vector<int>> fourSum(vector<int>& nums, int target) {
     }
     return result;
 }
+
+// 21. Merge Two Sorted Lists
+ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
+    if (l1 == NULL) {
+        return l2;
+    } else if (l2 == NULL) {
+        return l1;
+    }
+    ListNode* result;
+    ListNode* ptr1 = l1;
+    ListNode* ptr2 = l2;
+    
+    if (l1->val < l2->val) {
+        result = l1;
+        ptr1 = ptr1->next;
+    } else {
+        result = l2;
+        ptr2 = ptr2->next;
+    }
+    ListNode* result_ptr = result;
+    while (ptr1 != NULL && ptr2 != NULL) {
+        if (ptr1->val < ptr2->val) {
+            result_ptr->next = ptr1;
+            ptr1 = ptr1->next;
+        } else {
+            result_ptr->next = ptr2;
+            ptr2 = ptr2->next;
+        }
+        result_ptr = result_ptr->next;
+    }
+    if (ptr1 == NULL) {
+        result_ptr->next = ptr2;
+    } else{
+        result_ptr->next = ptr1;
+    }
+    
+    return result;
+}
+
+// 23. Merge k Sorted Lists
+// minHeap comparator class
+
+
+
+ListNode* mergeKLists(vector<ListNode*>& lists) {
+    
+}
+
 
 // 43. Multiply Strings
 //helper function

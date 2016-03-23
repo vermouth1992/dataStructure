@@ -171,6 +171,32 @@ TEST(add, multiply)
 }
 
 
+TEST(linkedList, mergeTwoSortedList)
+{
+    ListNode* l1 = new ListNode(1);
+    l1->next = new ListNode(9);
+    l1->next->next = new ListNode(10);
+    
+    ListNode* l2 = new ListNode(2);
+    l2->next = new ListNode(8);
+    l2->next->next = new ListNode(11);
+    
+    ListNode* expected = new ListNode(1);
+    ListNode* expected_working = expected;
+    expected_working->next = new ListNode(2);
+    expected_working = expected_working->next;
+    expected_working->next = new ListNode(8);
+    expected_working = expected_working->next;
+    expected_working->next = new ListNode(9);
+    expected_working = expected_working->next;
+    expected_working->next = new ListNode(10);
+    expected_working = expected_working->next;
+    expected_working->next = new ListNode(11);
+    
+    ListNode* actual = mergeTwoLists(l1, l2);
+    EXPECT_EQ(toInt(expected), toInt(actual));
+
+}
 
 
 
