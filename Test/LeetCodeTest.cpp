@@ -7,10 +7,13 @@
 //
 
 #include <stdio.h>
+#include <queue>          // std::priority_queue
+
 #include "LeetCode.hpp"
 #include "gtest/gtest.h"
 
 using namespace std;
+
 
 TEST(sum, twoSum)
 {
@@ -199,8 +202,26 @@ TEST(linkedList, mergeTwoSortedList)
 }
 
 
-
-
+TEST(linkedList, minHeap)
+{
+    std::priority_queue<ListNode*, std::vector<ListNode*>, LessThanByValue> tester;
+    ListNode* tmp1 = new ListNode(1);
+    tester.push(tmp1);
+    ListNode* tmp2 = new ListNode(10);
+    tester.push(tmp2);
+    ListNode* tmp3 = new ListNode(9);
+    tester.push(tmp3);
+    ListNode* tmp4 = new ListNode(5);
+    tester.push(tmp4);
+    EXPECT_EQ(tester.top()->val, 1);
+    tester.pop();
+    EXPECT_EQ(tester.top()->val, 5);
+    tester.pop();
+    EXPECT_EQ(tester.top()->val, 9);
+    tester.pop();
+    EXPECT_EQ(tester.top()->val, 10);
+    tester.pop();
+}
 
 
 

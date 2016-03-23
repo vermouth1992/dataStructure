@@ -20,13 +20,19 @@ using namespace std;
 
 // common interfaces
 // singly-linked list
-struct ListNode {
+class ListNode {
+public:
     int val;
     ListNode *next;
     ListNode(int x) : val(x), next(NULL) {}
 };
 
-
+struct LessThanByValue {
+    // why can't we pass by reference here
+    bool operator () (const ListNode* lhs, const ListNode* rhs) const {
+        return (lhs->val > rhs->val);
+    }
+};
 
 // #1, two sum
 /* using map, total time complexity is O(n) + O(n) = O(n) */
@@ -259,11 +265,9 @@ ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
 
 // 23. Merge k Sorted Lists
 // minHeap comparator class
-
-
-
 ListNode* mergeKLists(vector<ListNode*>& lists) {
     
+    return NULL;
 }
 
 
