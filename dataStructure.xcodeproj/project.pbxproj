@@ -39,7 +39,7 @@
 		4D1C3E131BC4B8AF00B88AD7 /* AVL.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AVL.hpp; sourceTree = "<group>"; };
 		4D2581071BC1A419003A45B0 /* BinSearchTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BinSearchTree.hpp; sourceTree = "<group>"; };
 		4D25A46F1B6D2EB300F43DB5 /* NormalTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalTest.h; sourceTree = "<group>"; };
-		4D266B8E1B5F3A400029D2F3 /* testProgram */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = testProgram; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D266B8E1B5F3A400029D2F3 /* dataStructure */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = dataStructure; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D266B911B5F3A400029D2F3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		4D30991B1CA0579900973AD3 /* LeetCode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LeetCode.hpp; sourceTree = "<group>"; };
 		4D30991C1CA0584000973AD3 /* LeetCodeTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LeetCodeTest.cpp; sourceTree = "<group>"; };
@@ -83,22 +83,23 @@
 		4D266B851B5F3A400029D2F3 = {
 			isa = PBXGroup;
 			children = (
-				4D266B901B5F3A400029D2F3 /* testProgram */,
+				4D266B901B5F3A400029D2F3 /* dataStructure */,
 				4DEBEFF81C332B080044E688 /* Test */,
 				4D266B8F1B5F3A400029D2F3 /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		4D266B8F1B5F3A400029D2F3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4D266B8E1B5F3A400029D2F3 /* testProgram */,
+				4D266B8E1B5F3A400029D2F3 /* dataStructure */,
 				4DEBEFF71C332B080044E688 /* Test */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4D266B901B5F3A400029D2F3 /* testProgram */ = {
+		4D266B901B5F3A400029D2F3 /* dataStructure */ = {
 			isa = PBXGroup;
 			children = (
 				4D1C3E131BC4B8AF00B88AD7 /* AVL.hpp */,
@@ -121,7 +122,8 @@
 				4D7A266F1B670E5C002D2970 /* Stack.h */,
 				4D30991B1CA0579900973AD3 /* LeetCode.hpp */,
 			);
-			path = testProgram;
+			name = dataStructure;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		4DEBEFF81C332B080044E688 /* Test */ = {
@@ -137,9 +139,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4D266B8D1B5F3A400029D2F3 /* testProgram */ = {
+		4D266B8D1B5F3A400029D2F3 /* dataStructure */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4D266B951B5F3A400029D2F3 /* Build configuration list for PBXNativeTarget "testProgram" */;
+			buildConfigurationList = 4D266B951B5F3A400029D2F3 /* Build configuration list for PBXNativeTarget "dataStructure" */;
 			buildPhases = (
 				4D266B8A1B5F3A400029D2F3 /* Sources */,
 				4D266B8B1B5F3A400029D2F3 /* Frameworks */,
@@ -149,9 +151,9 @@
 			);
 			dependencies = (
 			);
-			name = testProgram;
+			name = dataStructure;
 			productName = testProgram;
-			productReference = 4D266B8E1B5F3A400029D2F3 /* testProgram */;
+			productReference = 4D266B8E1B5F3A400029D2F3 /* dataStructure */;
 			productType = "com.apple.product-type.tool";
 		};
 		4DEBEFF61C332B080044E688 /* Test */ = {
@@ -188,7 +190,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4D266B891B5F3A400029D2F3 /* Build configuration list for PBXProject "testProgram" */;
+			buildConfigurationList = 4D266B891B5F3A400029D2F3 /* Build configuration list for PBXProject "dataStructure" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -200,7 +202,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4D266B8D1B5F3A400029D2F3 /* testProgram */,
+				4D266B8D1B5F3A400029D2F3 /* dataStructure */,
 				4DEBEFF61C332B080044E688 /* Test */,
 			);
 		};
@@ -265,7 +267,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -301,7 +303,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
@@ -310,14 +312,14 @@
 		4D266B961B5F3A400029D2F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = dataStructure;
 			};
 			name = Debug;
 		};
 		4D266B971B5F3A400029D2F3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = dataStructure;
 			};
 			name = Release;
 		};
@@ -349,7 +351,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4D266B891B5F3A400029D2F3 /* Build configuration list for PBXProject "testProgram" */ = {
+		4D266B891B5F3A400029D2F3 /* Build configuration list for PBXProject "dataStructure" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4D266B931B5F3A400029D2F3 /* Debug */,
@@ -358,7 +360,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4D266B951B5F3A400029D2F3 /* Build configuration list for PBXNativeTarget "testProgram" */ = {
+		4D266B951B5F3A400029D2F3 /* Build configuration list for PBXNativeTarget "dataStructure" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4D266B961B5F3A400029D2F3 /* Debug */,

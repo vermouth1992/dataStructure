@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:testProgram.xcodeproj">
+      location = "self:/Users/chizhang/Desktop/dataStructure/dataStructure.xcodeproj">
    </FileRef>
 </Workspace>

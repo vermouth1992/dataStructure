@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0720"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4DEBEFF61C332B080044E688"
-               BuildableName = "Test"
-               BlueprintName = "Test"
-               ReferencedContainer = "container:testProgram.xcodeproj">
+               BlueprintIdentifier = "4D266B8D1B5F3A400029D2F3"
+               BuildableName = "dataStructure"
+               BlueprintName = "dataStructure"
+               ReferencedContainer = "container:dataStructure.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,21 +32,22 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4DEBEFF61C332B080044E688"
-            BuildableName = "Test"
-            BlueprintName = "Test"
-            ReferencedContainer = "container:testProgram.xcodeproj">
+            BlueprintIdentifier = "4D266B8D1B5F3A400029D2F3"
+            BuildableName = "dataStructure"
+            BlueprintName = "dataStructure"
+            ReferencedContainer = "container:dataStructure.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
+      customWorkingDirectory = "/Users/chizhang/Desktop/Self-paced Learning/dataStructure"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
@@ -55,10 +56,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4DEBEFF61C332B080044E688"
-            BuildableName = "Test"
-            BlueprintName = "Test"
-            ReferencedContainer = "container:testProgram.xcodeproj">
+            BlueprintIdentifier = "4D266B8D1B5F3A400029D2F3"
+            BuildableName = "dataStructure"
+            BlueprintName = "dataStructure"
+            ReferencedContainer = "container:dataStructure.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +75,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4DEBEFF61C332B080044E688"
-            BuildableName = "Test"
-            BlueprintName = "Test"
-            ReferencedContainer = "container:testProgram.xcodeproj">
+            BlueprintIdentifier = "4D266B8D1B5F3A400029D2F3"
+            BuildableName = "dataStructure"
+            BlueprintName = "dataStructure"
+            ReferencedContainer = "container:dataStructure.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
