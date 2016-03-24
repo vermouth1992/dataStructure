@@ -16,7 +16,7 @@
  If you have any questions, please email zhan527@usc.edu
  */
 
-#include "Fibonacci.h"
+#include "Fibonacci.hpp"
 #include <iostream>
 
 Fib::Fib (int n)
