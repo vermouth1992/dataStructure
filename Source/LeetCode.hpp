@@ -130,6 +130,7 @@ namespace LeetCode {
         int longestLength = 0;
         int curr_length = 0;
         int curr_index = 0;
+        int start = 0;
         while (curr_index < s.size()) {
             char curr_char = s[curr_index];
             
@@ -138,13 +139,18 @@ namespace LeetCode {
                 char_dictionary[curr_char] = curr_index + 1;
                 curr_length += 1;
                 curr_index += 1;
-            } else {  // if curr_char is in the map
+            } else if (char_dictionary[curr_char] >= start) {  // if curr_char is in the current substring
                 curr_index += 1;
                 std::swap(curr_index, char_dictionary[curr_char]);
                 if (curr_length > longestLength) {
                     longestLength = curr_length;
                 }
-                curr_length = 0;
+                curr_length = 1;
+                start = curr_index;
+            } else { // curr_char is in the dict but not in the substring
+                char_dictionary[curr_char] = curr_index + 1;
+                curr_length += 1;
+                curr_index += 1;
             }
         }
         return max(longestLength, curr_length);
