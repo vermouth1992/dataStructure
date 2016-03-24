@@ -14,7 +14,7 @@
 #include "gtest/gtest.h"
 
 using namespace std;
-
+using namespace LeetCode;
 
 TEST(sum, twoSum)
 {
