@@ -27,42 +27,6 @@
 
 using namespace std;
 
-/*
-class mycomparison
-{
-    bool reverse;
-public:
-    mycomparison(const bool& revparam=false)
-    {reverse=revparam;}
-    bool operator() (const int& lhs, const int&rhs) const
-    {
-        if (reverse) return (lhs>rhs);
-        else return (lhs<rhs);
-    }
-};
-
-int main ()
-{
-    int myints[]= {10,60,50,20};
-    
-    std::priority_queue<int> first;
-    std::priority_queue<int> second (myints,myints+4);
-    std::priority_queue<int, std::vector<int>, std::greater<int> >
-    third (myints,myints+4);
-    // using mycomparison:
-    typedef std::priority_queue<int,std::vector<int>,mycomparison> mypq_type;
-    
-    mypq_type fourth;                       // less-than comparison
-    mypq_type fifth (mycomparison(true));   // greater-than comparison
-    
-    fourth.push(1);
-    fourth.push(10);
-    fourth.push(5);
-    cout << fourth.top();
-    return 0;
-}
-*/
-
 int main(int argc, const char * argv[]) {
 //    srand(time(NULL)); //this line should be global, but not in any function
     return 0;
