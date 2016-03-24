@@ -11,7 +11,6 @@
 		4D266B921B5F3A400029D2F3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D266B911B5F3A400029D2F3 /* main.cpp */; };
 		4D30991D1CA0584000973AD3 /* LeetCodeTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D30991C1CA0584000973AD3 /* LeetCodeTest.cpp */; };
 		4D36E0871C50063B004AB91D /* PriorityQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D36E0851C50063B004AB91D /* PriorityQueue.cpp */; };
-		4D36E08A1C5006FD004AB91D /* Heap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D36E0881C5006FD004AB91D /* Heap.cpp */; };
 		4D36E08E1C5067C1004AB91D /* HeapTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D36E08D1C5067C1004AB91D /* HeapTest.cpp */; };
 		4D520B341BC6FBD200C45C63 /* BTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D520B321BC6FBD200C45C63 /* BTree.cpp */; };
 		4D5A9FE91B5F3AF7001D6A91 /* Fibonacci.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D5A9FE51B5F3AF7001D6A91 /* Fibonacci.cpp */; };
@@ -44,21 +43,16 @@
 		4D1C3E151BC4BDB900B88AD7 /* AVL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AVL.cpp; sourceTree = "<group>"; };
 		4D2581071BC1A419003A45B0 /* BinSearchTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BinSearchTree.hpp; sourceTree = "<group>"; };
 		4D25A46F1B6D2EB300F43DB5 /* NormalTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalTest.h; sourceTree = "<group>"; };
-		4D25A4721B6D2F1D00F43DB5 /* TestForVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestForVector.h; sourceTree = "<group>"; };
-		4D25A4751B6D2F7E00F43DB5 /* TestForList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestForList.h; sourceTree = "<group>"; };
-		4D25A4781B6D2FB200F43DB5 /* TestForStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestForStack.h; sourceTree = "<group>"; };
 		4D266B8E1B5F3A400029D2F3 /* testProgram */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = testProgram; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D266B911B5F3A400029D2F3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		4D30991B1CA0579900973AD3 /* LeetCode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LeetCode.hpp; sourceTree = "<group>"; };
 		4D30991C1CA0584000973AD3 /* LeetCodeTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LeetCodeTest.cpp; sourceTree = "<group>"; };
 		4D36E0851C50063B004AB91D /* PriorityQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PriorityQueue.cpp; sourceTree = "<group>"; };
 		4D36E0861C50063B004AB91D /* PriorityQueue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PriorityQueue.hpp; sourceTree = "<group>"; };
-		4D36E0881C5006FD004AB91D /* Heap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Heap.cpp; sourceTree = "<group>"; };
 		4D36E0891C5006FD004AB91D /* Heap.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Heap.hpp; sourceTree = "<group>"; };
 		4D36E08D1C5067C1004AB91D /* HeapTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HeapTest.cpp; sourceTree = "<group>"; };
 		4D39C4111B7143B90060C5BD /* BinNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinNode.h; sourceTree = "<group>"; };
 		4D39C4141B7143C20060C5BD /* BinTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinTree.h; sourceTree = "<group>"; };
-		4D46352C1BC0F5860066F8FF /* TestForBinTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TestForBinTree.hpp; sourceTree = "<group>"; };
 		4D520B321BC6FBD200C45C63 /* BTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BTree.cpp; sourceTree = "<group>"; };
 		4D520B331BC6FBD200C45C63 /* BTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BTree.hpp; sourceTree = "<group>"; };
 		4D5A9FE51B5F3AF7001D6A91 /* Fibonacci.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Fibonacci.cpp; sourceTree = "<group>"; };
@@ -123,7 +117,6 @@
 				4D5A9FE51B5F3AF7001D6A91 /* Fibonacci.cpp */,
 				4D5A9FE61B5F3AF7001D6A91 /* Fibonacci.h */,
 				4DCE72F61B73E2D500AB0823 /* Graph.h */,
-				4D36E0881C5006FD004AB91D /* Heap.cpp */,
 				4D36E0891C5006FD004AB91D /* Heap.hpp */,
 				4D8C1E671B6EE1D70031A6CD /* Labyrinth.h */,
 				4D7092921B6159370002A588 /* List.h */,
@@ -135,10 +128,6 @@
 				4D36E0861C50063B004AB91D /* PriorityQueue.hpp */,
 				4D6638231B671FA7000CBD6A /* Queue.h */,
 				4D7A266F1B670E5C002D2970 /* Stack.h */,
-				4D46352C1BC0F5860066F8FF /* TestForBinTree.hpp */,
-				4D25A4751B6D2F7E00F43DB5 /* TestForList.h */,
-				4D25A4781B6D2FB200F43DB5 /* TestForStack.h */,
-				4D25A4721B6D2F1D00F43DB5 /* TestForVector.h */,
 				4D30991B1CA0579900973AD3 /* LeetCode.hpp */,
 			);
 			path = testProgram;
@@ -234,7 +223,6 @@
 				4D520B341BC6FBD200C45C63 /* BTree.cpp in Sources */,
 				4D1C3E161BC4BDB900B88AD7 /* AVL.cpp in Sources */,
 				4D5A9FE91B5F3AF7001D6A91 /* Fibonacci.cpp in Sources */,
-				4D36E08A1C5006FD004AB91D /* Heap.cpp in Sources */,
 				4D266B921B5F3A400029D2F3 /* main.cpp in Sources */,
 				4D36E0871C50063B004AB91D /* PriorityQueue.cpp in Sources */,
 			);

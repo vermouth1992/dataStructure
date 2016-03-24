@@ -21,11 +21,6 @@
 #include <unistd.h>
 #include <ctime>
 
-#include "TestForStack.h"
-#include "TestForList.h"
-#include "TestForVector.h"
-#include "TestForBinTree.hpp"
-
 #include <queue>          // std::priority_queue
 #include <vector>         // std::vector
 #include <functional>     // std::greater
