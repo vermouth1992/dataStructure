@@ -286,3 +286,14 @@ TEST(math, mySqrt)
     EXPECT_EQ((int)sqrt(2147483647), mySqrt(2147483647));
 }
 
+TEST(math, isNumber)
+{
+    EXPECT_TRUE(isNumber("-.02e-2"));
+    EXPECT_TRUE(isNumber("+.02e+2"));
+    EXPECT_TRUE(!isNumber("-.e-2"));
+    EXPECT_TRUE(!isNumber("."));
+    EXPECT_TRUE(isNumber("3."));
+    EXPECT_TRUE(!isNumber("3.."));
+}
+
+

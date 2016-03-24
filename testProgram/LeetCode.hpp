@@ -123,15 +123,15 @@ ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
 }
 
 // 8. String to Integer (atoi)
-enum atoiState {IDLE, NEGATIVE, POSITIVE};
+enum atoiState {ATOI_IDLE, NEGATIVE, POSITIVE};
 
 int myAtoi(string str) {
-    atoiState curr_state = IDLE;
+    atoiState curr_state = ATOI_IDLE;
     int result = 0;
     int num_digits = 0;
     for (int i = 0; i < str.size(); i++) {
         switch (curr_state) {
-            case IDLE:
+            case ATOI_IDLE:
                 if (str[i] != ' ' && str[i] != '-' && str[i] != '+' && (str[i] < '0' || str[i] > '9')) {
                     return result;
                 } else if (str[i] == '+') {
@@ -468,6 +468,117 @@ string multiply(string num1, string num2) {
         result = add(result, temp_result[i], 10);
     }
     return result;
+}
+
+// 65. Valid Number
+// using FSM
+enum numState {NUM_IDLE, INT_P, INT, DEC_P, DEC, SCI, NUM_P, NUM, END};
+
+bool isNumber(string s) {
+    numState curr_state = NUM_IDLE;
+    for (int i = 0; i < s.size(); i++) {
+        char curr_char = s[i];
+        switch (curr_state) {
+            case NUM_IDLE:
+                if (curr_char == ' ') {
+                    continue;
+                } else if (curr_char == '+' || curr_char == '-') {
+                    curr_state = INT_P;
+                } else if (isdigit(curr_char)) {
+                    curr_state = INT;
+                } else if (curr_char == '.') {
+                    curr_state = DEC_P;
+                } else {
+                    return false;
+                }
+                break;
+            
+            case INT_P:
+                if (curr_char == '.') {
+                    curr_state = DEC_P;
+                } else if (isdigit(curr_char)) {
+                    curr_state = INT;
+                } else {
+                    return false;
+                }
+                break;
+                
+            case INT:
+                if (isdigit(curr_char)) {
+                    continue;
+                } else if (curr_char == ' ') {
+                    curr_state = END;
+                } else if (curr_char == '.') {
+                    curr_state = DEC;
+                } else if (curr_char == 'e') {
+                    curr_state = SCI;
+                } else {
+                    return false;
+                }
+                break;
+                
+            case DEC_P:
+                if (isdigit(curr_char)) {
+                    curr_state = DEC;
+                } else {
+                    return false;
+                }
+                break;
+                
+            case DEC:
+                if (curr_char == ' ') {
+                    curr_state = END;
+                } else if (isdigit(curr_char)) {
+                    continue;
+                } else if (curr_char == 'e') {
+                    curr_state = SCI;
+                } else {
+                    return false;
+                }
+                break;
+                
+            case SCI:
+                if (curr_char == '+' || curr_char == '-') {
+                    curr_state = NUM_P;
+                } else if (isdigit(curr_char)) {
+                    curr_state = NUM;
+                } else {
+                    return false;
+                }
+                break;
+                
+            case NUM_P:
+                if (isdigit(curr_char)) {
+                    curr_state = NUM;
+                } else {
+                    return false;
+                }
+                break;
+                
+            case NUM:
+                if (isdigit(curr_char)) {
+                    continue;
+                } else if (curr_char == ' ') {
+                    curr_state = END;
+                } else {
+                    return false;
+                }
+                break;
+            
+            case END:
+                if (curr_char != ' ') {
+                    return false;
+                }
+                break;
+                
+            default:
+                break;
+        }
+    }
+    if (curr_state == NUM_IDLE || curr_state == INT_P || curr_state == DEC_P || curr_state == SCI || curr_state == NUM_P) {
+        return false;
+    }
+    return true;
 }
 
 
