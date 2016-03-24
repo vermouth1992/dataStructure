@@ -681,6 +681,48 @@ namespace LeetCode {
         }
         return weight;
     }
+    
+    // 338. Counting Bits
+    vector<int> countBits(int num) {
+        vector<int> result = {0};
+        if (num == 0) {
+            return result;
+        }
+        result.push_back(1);
+        if (num == 1) {
+            return result;
+        }
+        result.resize(num + 1);
+        
+        int curr_start = 2;
+        int curr_end = 4;
+        int curr_mid = (curr_start + curr_end) / 2;
+        while (curr_end <= num) {
+            /* calculate countBits [2^(n-1), 2^n) */
+            for (int j = curr_start; j < curr_mid; j++) {
+                result[j] = result[j - curr_start / 2];
+            }
+            for (int j = curr_mid; j < curr_end; j++) {
+                result[j] = result[j - curr_start / 2] + 1;
+            }
+            curr_start *= 2;
+            curr_end *= 2;
+            curr_mid *= 2;
+        }
+        if (num < curr_mid) {
+            for (int j = curr_start; j <= num; j++) {
+                result[j] = result[j - curr_start / 2];
+            }
+        } else {
+            for (int j = curr_start; j < curr_mid; j++) {
+                result[j] = result[j - curr_start / 2];
+            }
+            for (int j = curr_mid; j <= num; j++) {
+                result[j] = result[j - curr_start / 2] + 1;
+            }
+        }
+        return result;
+    }
 
 }
 

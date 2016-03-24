@@ -296,4 +296,12 @@ TEST(math, isNumber)
     EXPECT_TRUE(!isNumber("3.."));
 }
 
+TEST(math, countBits)
+{
+    vector<int> actual = countBits(8);
+    vector<int> expected = {0,1,1,2,1,2,2,3,1};
+    EXPECT_EQ(expected, actual);
+}
+
+
 
