@@ -12,6 +12,7 @@
 #include <iostream>
 #include <vector>
 #include <map>
+#include <unordered_map>
 #include <queue>
 #include <stdio.h>
 #include <stdlib.h>
@@ -49,7 +50,7 @@ namespace LeetCode {
     }
     
     
-    // #1, two sum
+    // 1. two sum
     /* using map, total time complexity is O(n) + O(n) = O(n) */
     vector<int> twoSum(vector<int>& nums, int target) {
         std::map<int, int> nums_map;
@@ -122,6 +123,33 @@ namespace LeetCode {
         }
         return result;
     }
+    
+    // 3. Longest Substring Without Repeating Characters
+    int lengthOfLongestSubstring(string s) {
+        std::map<char, int> char_dictionary;
+        int longestLength = 0;
+        int curr_length = 0;
+        int curr_index = 0;
+        while (curr_index < s.size()) {
+            char curr_char = s[curr_index];
+            
+            // if curr_char is not in the map
+            if (char_dictionary.find(curr_char) == char_dictionary.end()) {
+                char_dictionary[curr_char] = curr_index + 1;
+                curr_length += 1;
+                curr_index += 1;
+            } else {  // if curr_char is in the map
+                curr_index += 1;
+                std::swap(curr_index, char_dictionary[curr_char]);
+                if (curr_length > longestLength) {
+                    longestLength = curr_length;
+                }
+                curr_length = 0;
+            }
+        }
+        return max(longestLength, curr_length);
+    }
+    
     
     // 8. String to Integer (atoi)
     enum atoiState {ATOI_IDLE, NEGATIVE, POSITIVE};
