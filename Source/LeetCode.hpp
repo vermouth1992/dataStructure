@@ -518,6 +518,36 @@ namespace LeetCode {
         return result;
     }
     
+    // 62. Unique Paths
+    // we should have memoization for practice, however, the fastest way is to use iteration
+    namespace unique_path {
+        std::map<vector<int>, int> cache;
+        
+        int uniquePaths(int m, int n) {
+            vector<int> key = {m, n};
+            std::map<vector<int>, int>::iterator it = cache.find(key);
+            // result already in the cache
+            if (it != cache.end()) {
+                return it->second;
+            }
+            if (m - 1 == 0 || n - 1 == 0) {
+                cache[key] = 1;
+                return 1;
+            }
+            
+            int right = uniquePaths(m - 1, n);
+            vector<int> right_key = {m - 1, n};
+            cache[right_key] = right;
+            
+            int down = uniquePaths(m, n - 1);
+            vector<int> down_key = {m, n - 1};
+            cache[down_key] = down;
+            int result = right + down;
+            cache[key] = result;
+            return result;
+        }
+    }
+    
     // 64. Minimum Path Sum, use Uniform Cost Search
     struct minPathState {
         int x;

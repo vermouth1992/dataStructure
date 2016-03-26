@@ -326,6 +326,16 @@ TEST(array, minPathSum)
     EXPECT_EQ(3, actual);
 }
 
+TEST(array, uniquePaths)
+{
+    using namespace unique_path;
+    EXPECT_EQ(120, uniquePaths(8, 4));
+    EXPECT_EQ(120, uniquePaths(4, 8));
+    EXPECT_EQ(1, uniquePaths(1, 2));
+    EXPECT_EQ(1, uniquePaths(2, 1));
+    EXPECT_EQ(48620, uniquePaths(10, 10));
+    EXPECT_EQ(1916797311, uniquePaths(51, 9));
+}
 
 
 
