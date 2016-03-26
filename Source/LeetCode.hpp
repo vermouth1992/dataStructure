@@ -126,34 +126,32 @@ namespace LeetCode {
     
     // 3. Longest Substring Without Repeating Characters
     int lengthOfLongestSubstring(string s) {
+        // since it is a char hash table, we can actually use a vector indexing from 0-255
         std::map<char, int> char_dictionary;
-        int longestLength = 0;
         int curr_length = 0;
-        int curr_index = 0;
         int start = 0;
-        while (curr_index < s.size()) {
+        int maxLength = 0;
+        std::map<char,int>::iterator it;
+        for (int curr_index = 0; curr_index < s.size(); curr_index++) {
             char curr_char = s[curr_index];
-            
             // if curr_char is not in the map
-            if (char_dictionary.find(curr_char) == char_dictionary.end()) {
-                char_dictionary[curr_char] = curr_index + 1;
-                curr_length += 1;
-                curr_index += 1;
-            } else if (char_dictionary[curr_char] >= start) {  // if curr_char is in the current substring
-                curr_index += 1;
-                std::swap(curr_index, char_dictionary[curr_char]);
-                if (curr_length > longestLength) {
-                    longestLength = curr_length;
+            it = char_dictionary.find(curr_char);
+            if (it == char_dictionary.end()) {
+                char_dictionary[curr_char] = curr_index;  // the first time a char occurs
+            } else {
+                int curr_mapping = it->second;
+                if (curr_mapping >= start) {  // if curr_char is in the current substring
+                    curr_length = curr_index - start;
+                    maxLength = max(maxLength, curr_length);
+                    start = curr_mapping + 1;
+                    it->second = curr_index;
+                } else { // curr_char is in the dict but not in the substring
+                    it->second = curr_index;   // renew the index to be
                 }
-                curr_length = 1;
-                start = curr_index;
-            } else { // curr_char is in the dict but not in the substring
-                char_dictionary[curr_char] = curr_index + 1;
-                curr_length += 1;
-                curr_index += 1;
             }
         }
-        return max(longestLength, curr_length);
+        curr_length = (int)s.size() - start;
+        return max(curr_length, maxLength);
     }
     
     

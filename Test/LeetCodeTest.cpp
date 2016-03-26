@@ -316,6 +316,7 @@ TEST(string, lengthOfLongestSubstring)
     s = "aabopiuy";
     EXPECT_EQ(7, lengthOfLongestSubstring(s));
     EXPECT_EQ(3, lengthOfLongestSubstring("dvdf"));
+    EXPECT_EQ(2, lengthOfLongestSubstring("abba"));
 }
 
 
