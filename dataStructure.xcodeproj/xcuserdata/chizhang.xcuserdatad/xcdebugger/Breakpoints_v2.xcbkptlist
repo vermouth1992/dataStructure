@@ -26,54 +26,6 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Test/LeetCodeTest.cpp"
-            timestampString = "480700999.348667"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "318"
-            endingLineNumber = "318"
-            landmarkName = "TEST(string, lengthOfLongestSubstring)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "string_lengthOfLongestSubstring_Test::TestBody()"
-                  moduleName = "Test"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chizhang/Desktop/dataStructure/Test/LeetCodeTest.cpp"
-                  timestampString = "480549636.090857"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "318"
-                  endingLineNumber = "318"
-                  offsetFromSymbolStart = "2924">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "string_lengthOfLongestSubstring_Test::TestBody()"
-                  moduleName = "Test"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chizhang/Desktop/dataStructure/Test/LeetCodeTest.cpp"
-                  timestampString = "480549636.091883"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "318"
-                  endingLineNumber = "318"
-                  offsetFromSymbolStart = "3197">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Test/LeetCodeTest.cpp"
             timestampString = "480702088.498778"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"

@@ -154,7 +154,22 @@ namespace LeetCode {
         return max(curr_length, maxLength);
     }
     
+    // 4. Median of Two Sorted Arrays
+    // helper function
+/*
+    double findMedianSortedArraysIndex(vector<int>& nums1, int start1, int end1, vector<int>& nums2, int start2, int end2) {
+        int mid1 = end1 - start1;
+        int mid2 = end2 - start2;
+        // base case
+        if (<#condition#>) {
+            <#statements#>
+        }
+    }
     
+    double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+        return findMedianSortedArraysIndex(nums1, 0, (int)nums1.size(), nums2, 0, (int)nums2.size());
+    }
+*/
     // 8. String to Integer (atoi)
     enum atoiState {ATOI_IDLE, NEGATIVE, POSITIVE};
     
@@ -266,7 +281,7 @@ namespace LeetCode {
         int back_ptr = (int)nums.size() - 1;
         int closestNum = nums[front_ptr] + nums[back_ptr];
         while (front_ptr < back_ptr - 1) {
-            
+            break;
         }
         return closestNum;
     }
@@ -499,6 +514,95 @@ namespace LeetCode {
         }
         for (int i = 0; i < temp_result.size(); i++) {
             result = add(result, temp_result[i], 10);
+        }
+        return result;
+    }
+    
+    // 64. Minimum Path Sum, use Uniform Cost Search
+    struct minPathState {
+        int x;
+        int y;
+        int currSum;
+        minPathState(int _x, int _y, int sum) : x(_x), y(_y), currSum(sum) {}
+    };
+    
+    struct ComparePathState {
+        bool operator () (const minPathState* lhs, const minPathState* rhs) const {
+            return (lhs->currSum > rhs->currSum);
+        }
+    };
+    
+    // get next state, return a vector contains pointer to the next state
+    vector<minPathState*> getSuccessor(const minPathState* currState, const vector<vector<int>> &grid, const vector<vector<int>> &expanded) {
+        vector<minPathState*> nextState;
+        int m = (int)grid[0].size();
+        int n = (int)grid.size();
+        int currX = currState->x;
+        int currY = currState->y;
+        
+        if (currX == n - 1) {
+            int leftSum = 0;
+            for (int i = currY + 1; i < m; i++) {
+                leftSum += grid[currX][i];
+            }
+            minPathState* state = new minPathState(n - 1, m - 1, currState->currSum + leftSum);
+            nextState.push_back(state);
+            return nextState;
+        } else if (currY == m - 1) {
+            int leftSum = 0;
+            for (int i = currX + 1; i < n; i++) {
+                leftSum += grid[i][currY];
+            }
+            minPathState* state = new minPathState(n - 1, m - 1, currState->currSum + leftSum);
+            nextState.push_back(state);
+            return nextState;
+        } else {
+            if (expanded[currX + 1][currY] != -1) {
+                minPathState* state_down = new minPathState(currX + 1, currY, currState->currSum + grid[currX + 1][currY]);
+                nextState.push_back(state_down);
+            }
+            if (expanded[currX][currY + 1] != -1) {
+                minPathState* state_right = new minPathState(currX, currY + 1, currState->currSum + grid[currX][currY + 1]);
+                nextState.push_back(state_right);
+            }
+        }
+        return nextState;
+    }
+    
+    bool isGoalState(const minPathState* currState, const vector<vector<int>> &grid) {
+        int m = (int)grid[0].size();
+        int n = (int)grid.size();
+        return currState->x == n - 1 && currState->y == m - 1;
+    }
+    
+    int minPathSum(vector<vector<int>>& grid) {
+        // remember to delete expanded state to release memory
+        std::priority_queue<minPathState*, vector<minPathState*>, ComparePathState> helper_PQ;
+        minPathState* initState = new minPathState(0, 0, grid[0][0]);
+        helper_PQ.push(initState);
+        int result = 0;
+        // need to keep track of already expanded points
+        vector<vector<int>> expanded(grid);
+        
+        while (!helper_PQ.empty()) {
+            minPathState* topState = helper_PQ.top();
+            helper_PQ.pop();
+            expanded[topState->x][topState->y] = -1;  // mark as expanded
+            if (isGoalState(topState, grid)) {
+                result = topState->currSum;
+                // clear PQ, prevent memory leakage
+                while (!helper_PQ.empty()) {
+                    minPathState* toDelete = helper_PQ.top();
+                    helper_PQ.pop();
+                    delete toDelete;
+                }
+                return result;
+            }
+            vector<minPathState*> nextStateVector = getSuccessor(topState, grid, expanded);
+            for (minPathState* state : nextStateVector) {
+                helper_PQ.push(state);
+            }
+            delete topState;
         }
         return result;
     }

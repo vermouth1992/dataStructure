@@ -319,6 +319,12 @@ TEST(string, lengthOfLongestSubstring)
     EXPECT_EQ(2, lengthOfLongestSubstring("abba"));
 }
 
+TEST(array, minPathSum)
+{
+    vector<vector<int>> grid = {{0, 0, 1}, {0, 1, 2}};
+    int actual = minPathSum(grid);
+    EXPECT_EQ(3, actual);
+}
 
 
 
