@@ -161,8 +161,8 @@ namespace LeetCode {
         int mid1 = end1 - start1;
         int mid2 = end2 - start2;
         // base case
-        if (<#condition#>) {
-            <#statements#>
+        if (condition) {
+            statements
         }
     }
     
@@ -225,6 +225,8 @@ namespace LeetCode {
         }
         
     }
+    
+    
     
     // #15, 3Sum
     /* helper function, the output two-d vector should be a set, the nums should be in sorted order
