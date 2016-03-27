@@ -522,9 +522,10 @@ namespace LeetCode {
     
     // 62. Unique Paths
     // we should have memoization for practice, however, the fastest way is to use iteration
-    namespace unique_path {
+    class Solution_62 {
+    private:
         std::map<vector<int>, int> cache;
-        
+    public:
         int uniquePaths(int m, int n) {
             vector<int> key = {m, n};
             std::map<vector<int>, int>::iterator it = cache.find(key);
@@ -548,54 +549,57 @@ namespace LeetCode {
             cache[key] = result;
             return result;
         }
-        
-        // 63. Unique Paths II
-        std::map<vector<int>, int> cache_2;
+    };
+    
+    // 63. Unique Paths II
+    class Solution_63 {
+    private:
+        std::map<vector<int>, int> cache;
         
         int uniquePathsWithObstacles_private(vector<vector<int>>& obstacleGrid, int m, int n) {
             vector<int> key = {m, n};
-            std::map<vector<int>, int>::iterator it = cache_2.find(key);
+            std::map<vector<int>, int>::iterator it = cache.find(key);
             // result already in the cache
             int result;
-            if (it != cache_2.end()) {
+            if (it != cache.end()) {
                 return it->second;
             }
             if (obstacleGrid[m][n] == 1) {
-                cache_2[key] = 0;
+                cache[key] = 0;
                 return 0;
             }
             if (m == 0 && n == 0) {
-                cache_2[key] = 1;
+                cache[key] = 1;
                 return 1;
             } else if (m == 0) {
                 result = uniquePathsWithObstacles_private(obstacleGrid, m, n - 1);
-                cache_2[key] = result;
+                cache[key] = result;
                 return result;
             } else if (n == 0) {
                 result = uniquePathsWithObstacles_private(obstacleGrid, m - 1, n);
-                cache_2[key] = result;
+                cache[key] = result;
                 return result;
             }
             
             int right = uniquePathsWithObstacles_private(obstacleGrid, m - 1, n);
             vector<int> right_key = {m - 1, n};
-            cache_2[right_key] = right;
+            cache[right_key] = right;
             
             int down = uniquePathsWithObstacles_private(obstacleGrid, m, n - 1);
             vector<int> down_key = {m, n - 1};
-            cache_2[down_key] = down;
+            cache[down_key] = down;
             result = right + down;
-            cache_2[key] = result;
+            cache[key] = result;
             return result;
         }
-        
+    public:
         int uniquePathsWithObstacles(vector<vector<int>>& obstacleGrid) {
-            cache_2.clear();
+            cache.clear();
             int m = (int)obstacleGrid.size() - 1;
             int n = (int)obstacleGrid[0].size() - 1;
             return uniquePathsWithObstacles_private(obstacleGrid, m, n);
         }
-    }
+    };
     
     // 64. Minimum Path Sum, use Uniform Cost Search
     struct minPathState {

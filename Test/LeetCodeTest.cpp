@@ -328,24 +328,24 @@ TEST(array, minPathSum)
 
 TEST(array, uniquePaths)
 {
-    using namespace unique_path;
-    EXPECT_EQ(120, uniquePaths(8, 4));
-    EXPECT_EQ(120, uniquePaths(4, 8));
-    EXPECT_EQ(1, uniquePaths(1, 2));
-    EXPECT_EQ(1, uniquePaths(2, 1));
-    EXPECT_EQ(48620, uniquePaths(10, 10));
-    EXPECT_EQ(1916797311, uniquePaths(51, 9));
+    Solution_62 sol;
+    EXPECT_EQ(120, sol.uniquePaths(8, 4));
+    EXPECT_EQ(120, sol.uniquePaths(4, 8));
+    EXPECT_EQ(1, sol.uniquePaths(1, 2));
+    EXPECT_EQ(1, sol.uniquePaths(2, 1));
+    EXPECT_EQ(48620, sol.uniquePaths(10, 10));
+    EXPECT_EQ(1916797311, sol.uniquePaths(51, 9));
 }
 
 TEST(array, uniquePaths2)
 {
-    using namespace unique_path;
+    Solution_63 sol;
     vector<vector<int>> obstacles = {{0, 0, 0}, {0, 1, 0}, {0, 0, 0}};
-    EXPECT_EQ(2, uniquePathsWithObstacles(obstacles));
+    EXPECT_EQ(2, sol.uniquePathsWithObstacles(obstacles));
     obstacles = {{0}};
-    EXPECT_EQ(1, uniquePathsWithObstacles(obstacles));
+    EXPECT_EQ(1, sol.uniquePathsWithObstacles(obstacles));
     obstacles = {{0, 1}};
-    EXPECT_EQ(0, uniquePathsWithObstacles(obstacles));
+    EXPECT_EQ(0, sol.uniquePathsWithObstacles(obstacles));
 }
 
 
