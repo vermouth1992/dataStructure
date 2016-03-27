@@ -417,6 +417,69 @@ namespace LeetCode {
         return result;
     }
     
+// LeetCode 30 Start
+    
+    // 36. Valid Sudoku
+    bool checkSubBox(int m, int n, vector<vector<char>>& board) {
+        vector<bool> occurs(9, false);
+        for (int i = m; i < m + 3; i++) {
+            for (int j = n; j < n + 3; j++) {
+                if (board[i][j] == '.') {
+                    continue;
+                } else if (occurs[board[i][j] - '0'] == false) {
+                    occurs[board[i][j] - '0'] = true;
+                } else {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+    
+    bool isValidSudoku(vector<vector<char>>& board) {
+        // check board size
+        if (board.size() != 9 || board[0].size() != 9) {
+            return false;
+        }
+        // check row
+        for (int i = 0; i < 9; i++) {
+            vector<char> currLine = board[i];
+            vector<bool> occurs(9, false);
+            for (int j = 0; j < 9; j++) {
+                if (currLine[j] == '.') {
+                    continue;
+                } else if (occurs[currLine[j] - '0'] == false) {
+                    occurs[currLine[j] - '0'] = true;
+                } else {
+                    return false;
+                }
+            }
+        }
+        // check column
+        for (int i = 0; i < 9; i++) {
+            vector<bool> occurs(9, false);
+            for (int j = 0; j < 9; j++) {
+                if (board[j][i] == '.') {
+                    continue;
+                } else if (occurs[board[j][i] - '0'] == false) {
+                    occurs[board[j][i] - '0'] = true;
+                } else {
+                    return false;
+                }
+            }
+        }
+        // check sub-box
+        for (int i = 0; i < 7; i+=3) {
+            for (int j = 0; j < 7; j+=3) {
+                if (checkSubBox(i, j, board) == false) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+    
+// LeetCode 40 Start
     
     // 43. Multiply Strings
     //helper function
