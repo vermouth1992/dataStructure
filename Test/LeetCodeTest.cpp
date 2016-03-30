@@ -348,5 +348,12 @@ TEST(array, uniquePaths2)
     EXPECT_EQ(0, sol.uniquePathsWithObstacles(obstacles));
 }
 
+TEST(string, longestCommonPrefix)
+{
+    string a = "a";
+    vector<string> tester;
+    tester.push_back(a);
+    EXPECT_EQ("a", longestCommonPrefix(tester));
+}
 
 

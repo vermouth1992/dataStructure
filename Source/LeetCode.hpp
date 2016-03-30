@@ -226,6 +226,28 @@ namespace LeetCode {
         
     }
     
+    // 13. Roman to Integer, Input is guaranteed to be within the range from 1 to 3999.
+    int romanToInt(string s) {
+        
+    }
+    
+    // 14. Longest Common Prefix
+    string longestCommonPrefix(vector<string>& strs) {
+        string commonPrefix = "";
+        if (strs.size() == 0) {
+            return commonPrefix;
+        }
+        for (int i = 0; i < strs[0].size(); i++) {
+            char possibleCommonChar = strs[0][i];
+            for (int j = 1; j < strs.size(); j++) {
+                if (i >= strs[j].size() || strs[j][i] != possibleCommonChar) {
+                    return commonPrefix;
+                }
+            }
+            commonPrefix += possibleCommonChar;
+        }
+        return commonPrefix;
+    }
     
     
     // #15, 3Sum
