@@ -470,6 +470,45 @@ namespace LeetCode {
         return result;
     }
     
+    // 28. Implement strStr(), Returns the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
+    int strStr(string haystack, string needle) {
+        if (haystack.size() < needle.size()) {
+            return -1;
+        } else if (needle.size() == 0) {
+            return 0;
+        }
+        size_t start = 0;
+        size_t nextStart = 0;
+        bool findNext = false;
+        bool equal = true;
+        while (start <= haystack.size() - needle.size()) {
+            if (haystack[start] == needle[0]) {
+                // possible match
+                for (size_t i = 1; i < needle.size(); i++) {
+                    if (!findNext && needle[i] == haystack[start]) {
+                        nextStart = start + i - 1;
+                        findNext = true;
+                    }
+                    if (needle[i] != haystack[start + i]) {
+                        nextStart = start + 1;
+                        equal = false;
+                        break;
+                    }
+                }
+                if (equal) {
+                    return (int)start;
+                }
+                equal = true;
+                findNext = false;
+                start = nextStart;
+            } else {
+                start += 1;
+            }
+        }
+        return -1;
+    }
+    
+    
 // LeetCode 30 Start
     
     // 36. Valid Sudoku

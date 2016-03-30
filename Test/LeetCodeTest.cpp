@@ -290,22 +290,6 @@ TEST(math, countBits)
     EXPECT_EQ(expected, actual);
 }
 
-TEST(string, lengthOfLongestSubstring)
-{
-    string s = "abcabcbb";
-    EXPECT_EQ(3, lengthOfLongestSubstring(s));
-    s = "bbbbb";
-    EXPECT_EQ(1, lengthOfLongestSubstring(s));
-    s = "12oqwer";
-    EXPECT_EQ(s.size(), lengthOfLongestSubstring(s));
-    s = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ abcdefghijklmnopqrstuvwxyzABCD";
-    EXPECT_EQ(95, lengthOfLongestSubstring(s));
-    s = "aabopiuy";
-    EXPECT_EQ(7, lengthOfLongestSubstring(s));
-    EXPECT_EQ(3, lengthOfLongestSubstring("dvdf"));
-    EXPECT_EQ(2, lengthOfLongestSubstring("abba"));
-}
-
 TEST(array, minPathSum)
 {
     vector<vector<int>> grid = {{0, 0, 1}, {0, 1, 2}};
@@ -343,4 +327,27 @@ TEST(string, longestCommonPrefix)
     EXPECT_EQ("a", longestCommonPrefix(tester));
 }
 
+TEST(string, lengthOfLongestSubstring)
+{
+    string s = "abcabcbb";
+    EXPECT_EQ(3, lengthOfLongestSubstring(s));
+    s = "bbbbb";
+    EXPECT_EQ(1, lengthOfLongestSubstring(s));
+    s = "12oqwer";
+    EXPECT_EQ(s.size(), lengthOfLongestSubstring(s));
+    s = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ abcdefghijklmnopqrstuvwxyzABCD";
+    EXPECT_EQ(95, lengthOfLongestSubstring(s));
+    s = "aabopiuy";
+    EXPECT_EQ(7, lengthOfLongestSubstring(s));
+    EXPECT_EQ(3, lengthOfLongestSubstring("dvdf"));
+    EXPECT_EQ(2, lengthOfLongestSubstring("abba"));
+}
 
+TEST(string, strStr)
+{
+    EXPECT_EQ(3, strStr("abdsada", "s"));
+    EXPECT_EQ(0, strStr("abcabc", "abc"));
+    EXPECT_EQ(3, strStr("abdabc", "abc"));
+    EXPECT_EQ(3, strStr("gdafdafa", "fdaf"));
+    EXPECT_EQ(4, strStr("mississippi", "issip"));
+}
