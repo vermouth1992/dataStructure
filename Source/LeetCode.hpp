@@ -30,6 +30,7 @@ namespace LeetCode {
                 return (lhs->val > rhs->val);
             }
         };
+        
         int val;
         ListNode *next;
         ListNode(int x) : val(x), next(NULL) {}
@@ -49,6 +50,36 @@ namespace LeetCode {
         return result;
     }
     
+    class List {
+    private:
+        ListNode* head;
+    public:
+        List(ListNode* _head) : head(_head) {}
+        List(vector<int>& v) { head = vectorToList(v); }
+        ~List() {
+            while (head != NULL) {
+                ListNode* toDelete = head;
+                ListNode* newHead = head->next;
+                delete toDelete;
+                head = newHead;
+            }
+        }
+        friend bool operator == (const List& l1, const List& l2) {
+            ListNode* l1_ptr = l1.head;
+            ListNode* l2_ptr = l2.head;
+            while (l1_ptr != NULL && l2_ptr != NULL) {
+                if (l1_ptr->val != l2_ptr->val) {
+                    return false;
+                }
+                l1_ptr = l1_ptr->next;
+                l2_ptr = l2_ptr->next;
+            }
+            if (l1_ptr != NULL || l2_ptr != NULL) {
+                return false;
+            }
+            return true;
+        }
+    };
     
     // 1. two sum
     /* using map, total time complexity is O(n) + O(n) = O(n) */
@@ -228,7 +259,7 @@ namespace LeetCode {
     
     // 13. Roman to Integer, Input is guaranteed to be within the range from 1 to 3999.
     int romanToInt(string s) {
-        
+        return 0;
     }
     
     // 14. Longest Common Prefix

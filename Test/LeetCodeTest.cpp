@@ -115,19 +115,6 @@ TEST(sum, DISABLED_threeSumClosest)
     EXPECT_EQ(expected, actual);
 }
 
-//helper function
-int toInt(ListNode* l)
-{
-    int unit = 1;
-    int result = 0;
-    while (l != NULL) {
-        result = result + unit * l->val;
-        unit *= 10;
-        l = l->next;
-    }
-    return result;
-}
-
 TEST(add, addTwoNum)
 {
     ListNode* l1 = new ListNode(9);
@@ -144,7 +131,7 @@ TEST(add, addTwoNum)
     expected->next->next->next = new ListNode(1);
     
     ListNode* actual = addTwoNumbers(l1, l2);
-    EXPECT_EQ(toInt(expected), toInt(actual));
+    EXPECT_EQ(List(expected), List(actual));
 }
 
 
@@ -198,7 +185,7 @@ TEST(merge, mergeTwoSortedList)
     expected_working->next = new ListNode(11);
     
     ListNode* actual = mergeTwoLists(l1, l2);
-    EXPECT_EQ(toInt(expected), toInt(actual));
+    EXPECT_EQ(List(expected), List(actual));
 
 }
 
@@ -238,12 +225,12 @@ TEST(merge, mergeKSortedList)
     ListNode* temp_c = vectorToList<int>(c);
     tester.push_back(temp_c);
     
-    ListNode* actual = mergeKLists(tester);
+    List actual(mergeKLists(tester));
     
     vector<int> expected_vector = {0, 1, 2, 3, 4, 5, 9, 9, 10, 20};
-    ListNode* expected = vectorToList<int>(expected_vector);
+    List expected(expected_vector);
     
-    EXPECT_EQ(toInt(actual), toInt(expected));
+    EXPECT_EQ(actual, expected);
 }
 
 TEST(merge, mergeSortedArray)
