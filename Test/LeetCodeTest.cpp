@@ -319,6 +319,14 @@ TEST(array, uniquePaths2)
     EXPECT_EQ(0, sol.uniquePathsWithObstacles(obstacles));
 }
 
+TEST(array, moveZeroes)
+{
+    vector<int> actual = {0, 1, 0, 3, 12};
+    vector<int> expected = {1, 3, 12, 0, 0};
+    moveZeroes(actual);
+    EXPECT_EQ(expected, actual);
+}
+
 TEST(string, longestCommonPrefix)
 {
     string a = "a";

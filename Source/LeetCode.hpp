@@ -1056,6 +1056,27 @@ namespace LeetCode {
         return weight;
     }
     
+    
+    // 283. Move Zeroes
+    void moveZeroes(vector<int>& nums) {
+        std::queue<size_t> moveNoneZeroPos;
+        int numZeros = 0;
+        for (size_t i = 0; i < nums.size(); i++) {
+            if (nums[i] == 0) {
+                numZeros += 1;
+                moveNoneZeroPos.push(i);
+            } else if (!moveNoneZeroPos.empty() && nums[i] != 0) {
+                nums[moveNoneZeroPos.front()] = nums[i];
+                moveNoneZeroPos.pop();
+                moveNoneZeroPos.push(i);
+            }
+        }
+        for (size_t i = nums.size() - numZeros; i < nums.size(); i++) {
+            nums[i] = 0;
+        }
+    }
+    
+    
     // 338. Counting Bits
     vector<int> countBits(int num) {
         vector<int> result = {0};
