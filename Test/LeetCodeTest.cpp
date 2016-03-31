@@ -290,6 +290,17 @@ TEST(math, countBits)
     EXPECT_EQ(expected, actual);
 }
 
+TEST(math, reverse)
+{
+    EXPECT_EQ(123, reverse(321));
+    EXPECT_EQ(-123, reverse(-321));
+    EXPECT_EQ(1, reverse(1));
+    EXPECT_EQ(0, reverse(0));
+    EXPECT_EQ(0, reverse(-2147483648));
+    EXPECT_EQ(0, reverse(INT_MAX));
+    EXPECT_EQ(0, reverse(1534236469));
+}
+
 TEST(array, minPathSum)
 {
     vector<vector<int>> grid = {{0, 0, 1}, {0, 1, 2}};

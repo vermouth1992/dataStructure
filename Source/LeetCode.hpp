@@ -201,6 +201,30 @@ namespace LeetCode {
         return findMedianSortedArraysIndex(nums1, 0, (int)nums1.size(), nums2, 0, (int)nums2.size());
     }
 */
+    // 7. Reverse Integer
+    int reverse(int x) {
+        if (x == 0 || x == INT_MIN) {
+            return 0;
+        } else if (x < 0) {
+            return -reverse(-x);
+        } else {
+            if (x < 10) {
+                return x;
+            }
+            int digit, reversed_num = 0;
+            while (x > 0) {
+                digit = x % 10;
+                x /= 10;
+                if ((INT_MAX - digit) / 10 + 1 < reversed_num) {
+                    return 0;
+                }
+                reversed_num *= 10;
+                reversed_num += digit;
+            }
+            return reversed_num;
+        }
+    }
+    
     // 8. String to Integer (atoi)
     enum atoiState {ATOI_IDLE, NEGATIVE, POSITIVE};
     
