@@ -201,6 +201,42 @@ namespace LeetCode {
         return findMedianSortedArraysIndex(nums1, 0, (int)nums1.size(), nums2, 0, (int)nums2.size());
     }
 */
+    // 6. ZigZag Conversion
+    string convert(string s, int numRows) {
+        if (numRows <= 1) {
+            return s;
+        }
+        string result;
+        // even number of row
+        int numNumIter = 2 * numRows - 2;
+        // the first row
+        int pos = 0, nextPos;
+        while (pos < s.size()) {
+            result += s[pos];
+            pos += numNumIter;
+        }
+        // from the second row to N - 2 row
+        for (int row = 1; row < numRows - 1; row++) {
+            pos = row;
+            nextPos = numNumIter - row;
+            while (pos < s.size()) {
+                result += s[pos];
+                pos += numNumIter;
+                if (nextPos < s.size()) {
+                    result += s[nextPos];
+                    nextPos += numNumIter;
+                }
+            }
+        }
+        // the last row
+        pos = numRows - 1;
+        while (pos < s.size()) {
+            result += s[pos];
+            pos += numNumIter;
+        }
+        return result;
+    }
+    
     // 7. Reverse Integer
     int reverse(int x) {
         if (x == 0 || x == INT_MIN) {

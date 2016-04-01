@@ -371,3 +371,15 @@ TEST(string, strStr)
     EXPECT_EQ(3, strStr("gdafdafa", "fdaf"));
     EXPECT_EQ(4, strStr("mississippi", "issip"));
 }
+
+TEST(string, convert)
+{
+    string str_test = "PAYPALISHIRING";
+    EXPECT_EQ("PYAIHRNAPLSIIG", convert(str_test, 2));
+    EXPECT_EQ("PAHNAPLSIIGYIR", convert(str_test, 3));
+    EXPECT_EQ("PRAIIYHNPSGAIL", convert(str_test, 6));
+}
+
+
+
+
