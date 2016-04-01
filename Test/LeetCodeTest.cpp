@@ -299,6 +299,7 @@ TEST(math, reverse)
     EXPECT_EQ(0, reverse(-2147483648));
     EXPECT_EQ(0, reverse(INT_MAX));
     EXPECT_EQ(0, reverse(1534236469));
+    EXPECT_EQ(0, reverse(1563847412));
 }
 
 TEST(array, minPathSum)

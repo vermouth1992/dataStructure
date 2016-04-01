@@ -215,7 +215,7 @@ namespace LeetCode {
             while (x > 0) {
                 digit = x % 10;
                 x /= 10;
-                if ((INT_MAX - digit) / 10 + 1 < reversed_num) {
+                if ((INT_MAX - digit) / 10 < reversed_num) {
                     return 0;
                 }
                 reversed_num *= 10;
