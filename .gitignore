@@ -4,6 +4,7 @@
 */javalib/*
 */out/*
 *.class
+*.jar
 
 # Object files
 *.o
