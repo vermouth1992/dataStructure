@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D266B921B5F3A400029D2F3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D266B911B5F3A400029D2F3 /* main.cpp */; };
 		4D30991D1CA0584000973AD3 /* LeetCodeTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D30991C1CA0584000973AD3 /* LeetCodeTest.cpp */; };
 		4D36E08E1C5067C1004AB91D /* HeapTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D36E08D1C5067C1004AB91D /* HeapTest.cpp */; };
-		4D5A9FE91B5F3AF7001D6A91 /* Fibonacci.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D5A9FE51B5F3AF7001D6A91 /* Fibonacci.cpp */; };
+		4D39D4A11D14EA1D00E9CBBA /* Miscellaneous.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D39D4A01D14EA1D00E9CBBA /* Miscellaneous.cpp */; };
 		4DEBEFFA1C332B080044E688 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DEBEFF91C332B080044E688 /* main.cpp */; };
+		4DF971E11E811B47004CA0FA /* Fibonacci.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DF971DF1E811B47004CA0FA /* Fibonacci.cpp */; };
+		4DF971E21E811B47004CA0FA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DF971E01E811B47004CA0FA /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,29 +37,30 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4D1C3E131BC4B8AF00B88AD7 /* AVL.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AVL.hpp; sourceTree = "<group>"; };
-		4D2581071BC1A419003A45B0 /* BinSearchTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BinSearchTree.hpp; sourceTree = "<group>"; };
 		4D266B8E1B5F3A400029D2F3 /* dataStructure */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = dataStructure; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D266B911B5F3A400029D2F3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		4D30991B1CA0579900973AD3 /* LeetCode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LeetCode.hpp; sourceTree = "<group>"; };
 		4D30991C1CA0584000973AD3 /* LeetCodeTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LeetCodeTest.cpp; sourceTree = "<group>"; };
-		4D36E0861C50063B004AB91D /* PriorityQueue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PriorityQueue.hpp; sourceTree = "<group>"; };
-		4D36E0891C5006FD004AB91D /* Heap.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Heap.hpp; sourceTree = "<group>"; };
 		4D36E08D1C5067C1004AB91D /* HeapTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HeapTest.cpp; sourceTree = "<group>"; };
-		4D39C4111B7143B90060C5BD /* BinNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BinNode.hpp; sourceTree = "<group>"; };
-		4D39C4141B7143C20060C5BD /* BinTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BinTree.hpp; sourceTree = "<group>"; };
-		4D520B331BC6FBD200C45C63 /* BTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BTree.hpp; sourceTree = "<group>"; };
-		4D5A9FE51B5F3AF7001D6A91 /* Fibonacci.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Fibonacci.cpp; sourceTree = "<group>"; };
-		4D5A9FE61B5F3AF7001D6A91 /* Fibonacci.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Fibonacci.hpp; sourceTree = "<group>"; };
-		4D5A9FE81B5F3AF7001D6A91 /* MyVector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MyVector.hpp; sourceTree = "<group>"; };
-		4D6638231B671FA7000CBD6A /* Queue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Queue.hpp; sourceTree = "<group>"; };
-		4D70928F1B6158F00002A588 /* ListNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ListNode.hpp; sourceTree = "<group>"; };
-		4D7092921B6159370002A588 /* List.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = List.hpp; sourceTree = "<group>"; };
-		4D7A266F1B670E5C002D2970 /* Stack.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = Stack.hpp; sourceTree = "<group>"; };
-		4D8C1E671B6EE1D70031A6CD /* Labyrinth.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Labyrinth.hpp; sourceTree = "<group>"; };
-		4DCE72F61B73E2D500AB0823 /* Graph.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Graph.hpp; sourceTree = "<group>"; };
+		4D39D4A01D14EA1D00E9CBBA /* Miscellaneous.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Miscellaneous.cpp; sourceTree = "<group>"; };
 		4DEBEFF71C332B080044E688 /* Test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Test; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DEBEFF91C332B080044E688 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		4DF971CF1E811B32004CA0FA /* AVL.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = AVL.hpp; path = include/AVL.hpp; sourceTree = "<group>"; };
+		4DF971D01E811B32004CA0FA /* BinNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = BinNode.hpp; path = include/BinNode.hpp; sourceTree = "<group>"; };
+		4DF971D11E811B32004CA0FA /* BinSearchTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = BinSearchTree.hpp; path = include/BinSearchTree.hpp; sourceTree = "<group>"; };
+		4DF971D21E811B32004CA0FA /* BinTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = BinTree.hpp; path = include/BinTree.hpp; sourceTree = "<group>"; };
+		4DF971D31E811B32004CA0FA /* BTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = BTree.hpp; path = include/BTree.hpp; sourceTree = "<group>"; };
+		4DF971D41E811B32004CA0FA /* Fibonacci.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Fibonacci.hpp; path = include/Fibonacci.hpp; sourceTree = "<group>"; };
+		4DF971D51E811B32004CA0FA /* Graph.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Graph.hpp; path = include/Graph.hpp; sourceTree = "<group>"; };
+		4DF971D61E811B32004CA0FA /* Heap.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Heap.hpp; path = include/Heap.hpp; sourceTree = "<group>"; };
+		4DF971D71E811B32004CA0FA /* Labyrinth.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Labyrinth.hpp; path = include/Labyrinth.hpp; sourceTree = "<group>"; };
+		4DF971D81E811B32004CA0FA /* LeetCode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = LeetCode.hpp; path = include/LeetCode.hpp; sourceTree = "<group>"; };
+		4DF971D91E811B32004CA0FA /* List.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = List.hpp; path = include/List.hpp; sourceTree = "<group>"; };
+		4DF971DA1E811B32004CA0FA /* ListNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ListNode.hpp; path = include/ListNode.hpp; sourceTree = "<group>"; };
+		4DF971DB1E811B32004CA0FA /* MyVector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = MyVector.hpp; path = include/MyVector.hpp; sourceTree = "<group>"; };
+		4DF971DC1E811B32004CA0FA /* PriorityQueue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = PriorityQueue.hpp; path = include/PriorityQueue.hpp; sourceTree = "<group>"; };
+		4DF971DD1E811B32004CA0FA /* Queue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Queue.hpp; path = include/Queue.hpp; sourceTree = "<group>"; };
+		4DF971DE1E811B32004CA0FA /* Stack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Stack.hpp; path = include/Stack.hpp; sourceTree = "<group>"; };
+		4DF971DF1E811B47004CA0FA /* Fibonacci.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Fibonacci.cpp; path = src/Fibonacci.cpp; sourceTree = "<group>"; };
+		4DF971E01E811B47004CA0FA /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +84,10 @@
 		4D266B851B5F3A400029D2F3 = {
 			isa = PBXGroup;
 			children = (
+				4DF971CE1E811B24004CA0FA /* include */,
+				4DF971CD1E811B1F004CA0FA /* src */,
 				4D266B901B5F3A400029D2F3 /* dataStructure */,
-				4DEBEFF81C332B080044E688 /* Test */,
+				4DEBEFF81C332B080044E688 /* test */,
 				4D266B8F1B5F3A400029D2F3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -101,37 +105,53 @@
 		4D266B901B5F3A400029D2F3 /* dataStructure */ = {
 			isa = PBXGroup;
 			children = (
-				4D1C3E131BC4B8AF00B88AD7 /* AVL.hpp */,
-				4D39C4111B7143B90060C5BD /* BinNode.hpp */,
-				4D2581071BC1A419003A45B0 /* BinSearchTree.hpp */,
-				4D39C4141B7143C20060C5BD /* BinTree.hpp */,
-				4D520B331BC6FBD200C45C63 /* BTree.hpp */,
-				4D5A9FE51B5F3AF7001D6A91 /* Fibonacci.cpp */,
-				4D5A9FE61B5F3AF7001D6A91 /* Fibonacci.hpp */,
-				4DCE72F61B73E2D500AB0823 /* Graph.hpp */,
-				4D36E0891C5006FD004AB91D /* Heap.hpp */,
-				4D8C1E671B6EE1D70031A6CD /* Labyrinth.hpp */,
-				4D7092921B6159370002A588 /* List.hpp */,
-				4D70928F1B6158F00002A588 /* ListNode.hpp */,
-				4D266B911B5F3A400029D2F3 /* main.cpp */,
-				4D5A9FE81B5F3AF7001D6A91 /* MyVector.hpp */,
-				4D36E0861C50063B004AB91D /* PriorityQueue.hpp */,
-				4D6638231B671FA7000CBD6A /* Queue.hpp */,
-				4D7A266F1B670E5C002D2970 /* Stack.hpp */,
-				4D30991B1CA0579900973AD3 /* LeetCode.hpp */,
 			);
 			name = dataStructure;
 			path = Source;
 			sourceTree = "<group>";
 		};
-		4DEBEFF81C332B080044E688 /* Test */ = {
+		4DEBEFF81C332B080044E688 /* test */ = {
 			isa = PBXGroup;
 			children = (
 				4DEBEFF91C332B080044E688 /* main.cpp */,
 				4D36E08D1C5067C1004AB91D /* HeapTest.cpp */,
 				4D30991C1CA0584000973AD3 /* LeetCodeTest.cpp */,
+				4D39D4A01D14EA1D00E9CBBA /* Miscellaneous.cpp */,
 			);
+			name = test;
 			path = Test;
+			sourceTree = "<group>";
+		};
+		4DF971CD1E811B1F004CA0FA /* src */ = {
+			isa = PBXGroup;
+			children = (
+				4DF971DF1E811B47004CA0FA /* Fibonacci.cpp */,
+				4DF971E01E811B47004CA0FA /* main.cpp */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		4DF971CE1E811B24004CA0FA /* include */ = {
+			isa = PBXGroup;
+			children = (
+				4DF971CF1E811B32004CA0FA /* AVL.hpp */,
+				4DF971D01E811B32004CA0FA /* BinNode.hpp */,
+				4DF971D11E811B32004CA0FA /* BinSearchTree.hpp */,
+				4DF971D21E811B32004CA0FA /* BinTree.hpp */,
+				4DF971D31E811B32004CA0FA /* BTree.hpp */,
+				4DF971D41E811B32004CA0FA /* Fibonacci.hpp */,
+				4DF971D51E811B32004CA0FA /* Graph.hpp */,
+				4DF971D61E811B32004CA0FA /* Heap.hpp */,
+				4DF971D71E811B32004CA0FA /* Labyrinth.hpp */,
+				4DF971D81E811B32004CA0FA /* LeetCode.hpp */,
+				4DF971D91E811B32004CA0FA /* List.hpp */,
+				4DF971DA1E811B32004CA0FA /* ListNode.hpp */,
+				4DF971DB1E811B32004CA0FA /* MyVector.hpp */,
+				4DF971DC1E811B32004CA0FA /* PriorityQueue.hpp */,
+				4DF971DD1E811B32004CA0FA /* Queue.hpp */,
+				4DF971DE1E811B32004CA0FA /* Stack.hpp */,
+			);
+			name = include;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,7 +197,7 @@
 		4D266B861B5F3A400029D2F3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "University of Southern California";
 				TargetAttributes = {
 					4D266B8D1B5F3A400029D2F3 = {
@@ -211,8 +231,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D5A9FE91B5F3AF7001D6A91 /* Fibonacci.cpp in Sources */,
-				4D266B921B5F3A400029D2F3 /* main.cpp in Sources */,
+				4DF971E21E811B47004CA0FA /* main.cpp in Sources */,
+				4DF971E11E811B47004CA0FA /* Fibonacci.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +242,7 @@
 			files = (
 				4D36E08E1C5067C1004AB91D /* HeapTest.cpp in Sources */,
 				4D30991D1CA0584000973AD3 /* LeetCodeTest.cpp in Sources */,
+				4D39D4A11D14EA1D00E9CBBA /* Miscellaneous.cpp in Sources */,
 				4DEBEFFA1C332B080044E688 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,8 +263,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
@@ -265,7 +288,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -285,8 +308,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
@@ -301,7 +326,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};

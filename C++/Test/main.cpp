@@ -9,6 +9,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <time.h>
+#include <vector>
 #include <sys/time.h>
 #include "gtest/gtest.h"
 
@@ -16,6 +17,6 @@
 int main(int argc, char * argv[])
 {
     ::testing::InitGoogleTest(&argc, argv);
-    ::testing::GTEST_FLAG(filter) = "string*";   //google test filter
+    ::testing::GTEST_FLAG(filter) = "arrayTest*";   //google test filter
     return RUN_ALL_TESTS();
 }

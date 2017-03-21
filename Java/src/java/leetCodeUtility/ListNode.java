@@ -1,8 +1,5 @@
 package leetCodeUtility;
 
-import org.junit.Test;
-import static org.junit.Assert.*;
-
 import java.util.List;
 
 /**
@@ -65,15 +62,10 @@ public class ListNode {
         return result;
     }
 
-
-
-
-
     public static void main(String[] args) {
         int[] a = {1, 2, 3, -4, 5};
         ListNode head = new ListNode(a);
         System.out.println(head);
-        // jh61b.junit.TestRunner.runTests("all", ListNode.class);
     }
 
 }
